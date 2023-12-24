@@ -23,7 +23,9 @@ const HomeServiceConImage: FC<HomeServiceConImageProps> = ({
           className="rounded-xl w-full h-auto md:w-[20rem]"
         />
         <div>
-          <h3 className=" font-bold my-5 md:my-0 text-primary">Get Built</h3>
+          <h3 className=" font-bold my-5 lg:my-2 lg:text-2xl lg:mt-8 text-primary">
+            Get Built
+          </h3>
           <p>Improving process management for the GetBuilt team</p>
         </div>
       </a>
