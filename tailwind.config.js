@@ -11,12 +11,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgColor: "#f6f3ec",
+        bgColor: "#fffafa",
         primary: "#ea7210",
+        grayCol: "#D1D5DB",
       },
       padding: {
-        padY: "74px",
+        padY: "64px",
         padX: "140px",
+        padXMobile: "24px",
+        padYMobile: "24px",
       },
     },
   },
