@@ -4,6 +4,22 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
+Git workflow:
+
+```bash
+git checkout main && git pull
+
+git checkout -b naziv-brenca
+
+git add .
+
+git commit -m "commit message"
+
+git push (git push --origin-upstream)
+
+Open Pull Request to main
+```
+
 ```bash
 npm run dev
 # or
