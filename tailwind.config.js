@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         bgColor: "#f6f3ec",
         primary: "#ea7210",
+        secondary: "#ffb100",
       },
       padding: {
         padY: "74px",

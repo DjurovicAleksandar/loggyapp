@@ -1,14 +1,8 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import AboutUs from "@/pages/about-us";
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24  ${inter.className}`}
-    >
-      <p className="text-primary">TITO JE STAJA</p>
-    </main>
-  );
+  return <div>p</div>;
 }
+
+//Your digital success starts here. Logyy, Mastering Marketing, Web
+//Development and UI/UX Design.
