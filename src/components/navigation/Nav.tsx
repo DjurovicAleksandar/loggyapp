@@ -55,9 +55,15 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
           </span>
           {openServices && <NavServices />}
         </li>
+
         <li>
           <a href="#" className="hover:text-primary duration-300 ease-linear">
             About
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:text-primary duration-300 ease-linear">
+            Case studies
           </a>
         </li>
         <li>
