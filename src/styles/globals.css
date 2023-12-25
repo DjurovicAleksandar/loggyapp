@@ -5,3 +5,9 @@
 .marquee-item {
   margin-right: 2rem;
 }
+
+.bgImage {
+  background-image: url("../assets/9495910.png");
+  background-size: cover;
+  background-position: center;
+}
