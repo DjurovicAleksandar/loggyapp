@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main className={`${inter.className} w-full `}>
-      <section className="w-full h-[160vh] relative ">
+      <section className="w-full h-[160vh] lg:h-screen relative ">
         {/* Layer */}
         <div className="absolute inset-0 w-full h-full px-padXMobile md:px-padX py-[40%] md:flex items-center gap-10">
           {/* Text */}
