@@ -65,7 +65,7 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
 
         <li>
           <Link
-            href="about-us"
+            href="/about-us"
             className="hover:text-primary duration-300 ease-linear"
           >
             About
@@ -81,7 +81,7 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
         </li>
         <li>
           <Link
-            href="blog"
+            href="/blog"
             className="hover:text-primary duration-300 ease-linear"
           >
             Blog
@@ -89,7 +89,7 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
         </li>
       </ul>
       <Link
-        href="get-in-touch"
+        href="/get-in-touch"
         className=" hidden md:block duration-300 ease-linear font-bold text-primary"
       >
         Get in touch

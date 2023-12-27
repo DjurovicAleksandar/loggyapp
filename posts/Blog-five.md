@@ -3,6 +3,7 @@ title: "Sudden Drop in Website Traffic: What happened and what can I do?"
 date: "25th December 2023"
 shortDescription: "If you've lost your traffic overnight, then we've prepared the most common sense guide to fix the issue."
 blogImage: "/images/posts/blog1.jpg"
+category: "Development"
 ---
 
 A sudden drop in website traffic can be a nightmare to experience. If you don’t know what’s happening, you’re left with only your imagination to fill in the blanks.
