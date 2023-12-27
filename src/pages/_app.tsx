@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }: AppProps) {
             </li>
 
             <li className=" hover:text-primary">
-              <a href="#">Contact</a>
+              <a href="#">Get in touch</a>
             </li>
           </ul>
         </div>

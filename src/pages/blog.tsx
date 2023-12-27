@@ -20,6 +20,7 @@ interface BlogProps {
     };
   }[];
 }
+
 const blog: FC<BlogProps> = ({ posts }) => {
   const categoriesToShow = ["Highlight", "Development", "UXUI"];
 
@@ -46,15 +47,18 @@ const blog: FC<BlogProps> = ({ posts }) => {
         const id0 = Math.floor(Math.random() * 20);
         return (
           <div className="w-4/5 mx-auto" key={id0}>
-            <div className="w-full flex items-start justify-between">
-              <h2 className="text-4xl font-bold mb-10">
+            <div className="w-full lg:flex items-start justify-between">
+              <h2 className="text-4xl font-bold mb-4 lg:mb-10">
                 {categoriesToShow[i]}
               </h2>
-              <Link href={`categories/${categoriesToShow[i].toLowerCase()}`}>
+              <Link
+                href={`categories/${categoriesToShow[i].toLowerCase()}`}
+                style={{ fontSize: "18px", fontWeight: "600" }}
+              >
                 View all from {categoriesToShow[i].toLowerCase()}
               </Link>
             </div>
-            <div className="w-full flex items-center justify-center gap-4 flex-wrap">
+            <div className="w-full flex items-center justify-center gap-4 flex-wrap mt-5 lg:mt-0">
               {arr.map(({ blogFront, slug }, j) => {
                 const id = Math.floor(Math.random() * 20);
                 const { title, date, shortDescription, blogImage } = blogFront;
