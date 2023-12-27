@@ -5,7 +5,6 @@ import fs from "fs";
 import path from "path";
 import { type FC } from "react";
 import Link from "next/link";
-import Button from "@/components/general/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
