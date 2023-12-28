@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavServicesList from "./NavServicesList";
+import Link from "next/link";
 
 const NavServices = () => {
   const [posts, setPosts] = useState([]);
@@ -21,8 +22,9 @@ const NavServices = () => {
     fetchLatestPosts();
   }, []);
 
+  console.log(posts);
   return (
-    <div className=" absolute w-[700px]  bg-white z-10 -bottom-[680px] left-1/2  -translate-x-1/2 shadow-md rounded-xl">
+    <div className=" absolute w-[700px]  bg-white z-10  left-1/2  -translate-x-1/2 shadow-md rounded-xl">
       <NavServicesList />
       <div className="bg-gray-50 px-padXMobile py-padYMobile">
         <h2 className="mb-4 font-bold">Recent Posts</h2>
@@ -39,10 +41,10 @@ const NavServices = () => {
             );
           })}
 
-          <a href="#" className="mt-4">
+          <Link href="/blog" className="mt-4">
             {" "}
             View all posts →
-          </a>
+          </Link>
         </div>
       </div>
     </div>

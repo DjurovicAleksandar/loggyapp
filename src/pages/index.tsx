@@ -27,7 +27,7 @@ export default function Home() {
               </span>{" "}
               with <span className="font-sedmibold text-primary">us</span>!
             </h1>
-            <p className="w-full md:w-1/2 mt-4">
+            <p className="w-full md:w-1/2 mt-4 ">
               Revamp Your Digital Presence with Expert UX/UI Design, Web
               Development, Headless E-commerce, and Platforms like WordPress,
               Webflow, Shopify, Next.js, and React.
@@ -69,25 +69,22 @@ export default function Home() {
         <div className="w-full h-full">
           <Image alt="Header image" src={headerImg} className="h-full w-full" />
         </div>
-      </section>{" "}
+      </section>
       <section className="w-full  py-padYMobile px-padXMobile  md:my-40">
-        <h3 className="md:px-padX text-center mb-40 font-semibold md:text-5xl">
+        <h3 className="md:px-padX text-center my-20 lg:my-40 font-thin md:text-5xl">
           Our arsenal of cutting-edge technologies powers
-          <span className="text-primary"> Loggy&apos;s solutions</span>, setting
+          <span className="font-bold"> Loggy&apos;s solutions</span>, setting
           the pace for innovation.
         </h3>
         <ServiceMarquee />
       </section>
       <SectionLayout>
-        <h2 className="font-semibold text-center text-4xl md:text-6xl">
-          We&apos;ll craft{" "}
-          <span className="text-primary font-semibold underline">
-            the solution
-          </span>{" "}
-          to elevate
+        <h2 className="font-thin text-center text-4xl md:text-6xl">
+          We&apos;ll craft <span className=" font-bold">the solution</span> to
+          elevate
           <br /> your digital presence
         </h2>
-        <p className="mt-10 text-center text-xl md:w-1/2 md:mx-auto mb-40">
+        <p className="mt-10 text-center font-light text-xl md:w-1/2 md:mx-auto mb-40">
           We excel in crafting game-changing digital solutions. Whether its
           pioneering web development or pioneering app design, our focus is
           driving your brand towards success.
