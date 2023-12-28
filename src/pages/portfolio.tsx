@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
-import header1 from "@/assets/images/home/header1.jpg";
+import portfolio1 from "@/assets/images/home/portfolio1.jpg";
 import Image from "next/image";
 import { type FC } from "react";
+import PortfolioContent from "@/components/portfolio/PortfolioContent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,50 +10,86 @@ const projects = [
   {
     projectCategory: "Development",
     projectName: "Website A",
-    projectImages: [header1, header1, header1, header1, header1],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDesciprtion:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [header1, header1, header1, header1, header1],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDesciprtion:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [header1, header1, header1, header1, header1],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDesciprtion:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [header1, header1, header1, header1, header1],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDesciprtion:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [header1, header1, header1, header1, header1],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDesciprtion:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [header1, header1, header1, header1, header1],
+    projectImages: [
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+    ],
     projectShortDescription: "Lorem ipsum dolorem suit",
     projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit",
+      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
+  },
+  {
+    projectCategory: "Development",
+    projectName: "Website X",
+    projectImages: [
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+    ],
+    projectShortDescription: "Lorem ipsum dolorem suit",
+    projectDescription:
+      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
+  },
+  {
+    projectCategory: "Development",
+    projectName: "Website Y",
+    projectImages: [
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+    ],
+    projectShortDescription: "Lorem ipsum dolorem suit",
+    projectDescription:
+      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
+  },
+  {
+    projectCategory: "Development",
+    projectName: "Website O",
+    projectImages: [
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+    ],
+    projectShortDescription: "Lorem ipsum dolorem suit",
+    projectDescription:
+      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
+  },
+  {
+    projectCategory: "Development",
+    projectName: "Website A",
+    projectImages: [
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+    ],
+    projectShortDescription: "Lorem ipsum dolorem suit",
+    projectDescription:
+      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
+  },
+  {
+    projectCategory: "Development",
+    projectName: "Website B",
+    projectImages: [
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+      { original: portfolio1, thumbnail: portfolio1 },
+    ],
+    projectShortDescription: "Lorem ipsum dolorem suit",
+    projectDescription:
+      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
   },
 ];
 
@@ -89,7 +126,18 @@ const portfolio: FC<PortoflioProps> = ({ handleShowModal, showModal }) => {
           ) => {
             return (
               <div
-                onClick={() => handleShowModal(!showModal, <div>pp</div>)}
+                onClick={() =>
+                  handleShowModal(
+                    !showModal,
+                    <PortfolioContent
+                      projectCategory={projectCategory}
+                      projectName={projectName}
+                      projectImages={projectImages}
+                      projectDescription={projectDescription}
+                      handleShowModal={handleShowModal}
+                    />
+                  )
+                }
                 key={i}
                 className="cursor-pointer"
               >
@@ -97,11 +145,12 @@ const portfolio: FC<PortoflioProps> = ({ handleShowModal, showModal }) => {
                   width={600}
                   height={600}
                   alt={projectName}
-                  src={projectImages[0]}
+                  src={projectImages[0].original}
                   className="w-full h-full lg:w-[30rem] lg:h-[30rem] rounded-xl"
                 />
                 <h3 className="text-gray-150 my-2">{projectCategory}</h3>
                 <h2 className="text-3xl font-semibold">{projectName}</h2>
+                <p>{projectShortDescription}</p>
               </div>
             );
           }

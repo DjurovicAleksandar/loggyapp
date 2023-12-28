@@ -2,14 +2,24 @@ import { type FC, useState, useEffect } from "react";
 import NavServices from "./NavServices";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import NavMobile from "@/components/navigation/NavMobile";
 
 interface NavProps {
-  onShowModal: (showModal: boolean) => void;
+  handleShowModal: (
+    showModal: boolean,
+    modalContent: React.ReactNode | null
+  ) => void;
+  onOpenServices: (showModal: boolean) => void;
   showModal: boolean;
+  openServices: boolean;
 }
 
-const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
-  const [openServices, setOpenServices] = useState(false);
+const Nav: FC<NavProps> = ({
+  handleShowModal,
+  showModal,
+  openServices,
+  onOpenServices,
+}) => {
   const [scrolledFromTop, setScrolledFromTop] = useState(false);
   const router = useRouter();
 
@@ -20,14 +30,14 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
 
       if (position > threshold) {
         setScrolledFromTop(true);
-        setOpenServices(false);
+        onOpenServices(false);
       } else {
         setScrolledFromTop(false);
       }
     };
 
     const handleRouteChange = () => {
-      setOpenServices(false);
+      onOpenServices(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +47,7 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
       window.removeEventListener("scroll", handleScroll);
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router.events]);
+  }, [router.events, onOpenServices]);
 
   return (
     <nav
@@ -52,8 +62,8 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
       <ul className=" gap-5 text-black hidden md:flex">
         <li
           className="group duration-300 ease-linear cursor-pointer relative"
-          onClick={(e) => {
-            setOpenServices(!openServices);
+          onClick={() => {
+            onOpenServices(!openServices);
           }}
         >
           <span className="group-hover:text-primary ">
@@ -73,10 +83,10 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
         </li>
         <li>
           <Link
-            href="#"
+            href="/portfolio"
             className="hover:text-primary duration-300 ease-linear"
           >
-            Case studies
+            Portfolio
           </Link>
         </li>
         <li>
@@ -95,7 +105,15 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
         Get in touch
       </Link>
       <div
-        onClick={() => onShowModal(!showModal)}
+        onClick={() =>
+          handleShowModal(
+            !showModal,
+            <NavMobile
+              openServices={openServices}
+              onOpenServices={onOpenServices}
+            />
+          )
+        }
         className="md:hidden cursor-pointer group"
       >
         <div className="relative w-6 h-[0.1rem] bg-primary mb-2 duration-300 ease-linear " />

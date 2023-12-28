@@ -11,3 +11,8 @@
   background-size: cover;
   background-position: center;
 }
+
+.my-image-gallery img {
+  width: 400px;
+  height: 400px;
+}
