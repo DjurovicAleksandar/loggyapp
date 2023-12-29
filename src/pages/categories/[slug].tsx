@@ -1,10 +1,8 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getAllPosts, getPostsByCategory } from "../api/postFetch";
 
 interface CategoriesProps {
   posts: {
@@ -56,17 +54,12 @@ const CategoriesPage: FC<CategoriesProps> = ({ posts, category }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Fetch all post files from the posts directory
-  const files = fs.readdirSync(path.join("posts"));
+  const allPosts = getAllPosts();
 
-  // Extract categories from post frontmatter
-  const categories = files.map((file) => {
-    const filePath = path.join("posts", file);
-    const fileContents = fs.readFileSync(filePath, "utf-8");
-    const { data: frontmatter } = matter(fileContents);
-
-    return frontmatter.category.toLowerCase();
-  });
+  // Extract categories from all posts
+  const categories = allPosts.map((post) =>
+    post.blogFront.category.toLowerCase()
+  );
 
   // Deduplicate and create paths for each category
   const uniqueCategories = Array.from(new Set<string>(categories));
@@ -82,27 +75,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params || {};
+  const { slug } = params ?? { slug: "" };
 
+  const categorySlug = Array.isArray(slug) ? slug[0] : slug || "";
 
-  const files = fs.readdirSync(path.join("posts"));
-
-  const posts = files
-    .map((filename) => {
-      const postSlug = filename.replace(".md", "");
-      const markdownWithMeta = fs.readFileSync(
-        path.join("posts", filename),
-        "utf-8"
-      );
-
-      const { data: blogFront } = matter(markdownWithMeta);
-
-      return {
-        slug: postSlug,
-        blogFront,
-      };
-    })
-    .filter((post) => post.blogFront.category.toLowerCase() === slug);
+  const posts = getPostsByCategory(categorySlug);
 
   return {
     props: {

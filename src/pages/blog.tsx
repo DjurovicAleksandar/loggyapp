@@ -1,12 +1,10 @@
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 import { type FC } from "react";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
+import { getAllPosts } from "./api/postFetch";
 
 interface BlogProps {
   posts: {
@@ -41,7 +39,7 @@ const blog: FC<BlogProps> = ({ posts }) => {
 
   return (
     <main
-      className={`${inter.className} w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX flex flex-wrap items-center justify-center gap-10`}
+      className={`w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX flex flex-wrap items-center justify-center gap-10`}
     >
       {filteredPostsArray.map((arr, i) => {
         const id0 = Math.floor(Math.random() * 20);
@@ -106,22 +104,7 @@ const blog: FC<BlogProps> = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("posts"));
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-
-    const { data: blogFront } = matter(markdownWithMeta);
-
-    return {
-      slug,
-      blogFront,
-    };
-  });
+  const posts = getAllPosts();
 
   return {
     props: {

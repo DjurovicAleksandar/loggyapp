@@ -1,10 +1,8 @@
-import fs from "fs";
-import path from "path";
 import { GetStaticPaths, GetStaticProps } from "next";
-import matter from "gray-matter";
 import { type FC } from "react";
 import Image from "next/image";
 import { marked } from "marked";
+import { getAllPosts } from "../api/postFetch";
 
 interface PostPageProps {
   blogFront: {
@@ -53,10 +51,11 @@ const PostPage: FC<PostPageProps> = ({ blogFront, content, slug }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync(path.join("posts"));
+  const allPosts = getAllPosts();
 
-  const paths = files.map((filename) => ({
-    params: { slug: filename.replace(".md", "") },
+  // Generate paths for all posts
+  const paths = allPosts.map((post) => ({
+    params: { slug: post.slug },
   }));
 
   return {
@@ -67,13 +66,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params || {};
+  const allPosts = getAllPosts();
 
-  const markdownWithMeta = fs.readFileSync(
-    path.join("posts", slug + ".md"),
-    "utf-8"
-  );
+  // Find the post with the matching slug
+  const post = allPosts.find((post) => post.slug === slug);
 
-  const { data: blogFront, content } = matter(markdownWithMeta);
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const { blogFront, content } = post;
 
   return {
     props: {
@@ -83,5 +87,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
-
 export default PostPage;
