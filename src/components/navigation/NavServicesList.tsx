@@ -1,4 +1,4 @@
-import { navServices } from "@/components/navigation/NavServicesDb";
+import { navServices } from "@/data/NavServicesDb";
 import NavService from "./NavService";
 
 const NavServicesList = () => {
