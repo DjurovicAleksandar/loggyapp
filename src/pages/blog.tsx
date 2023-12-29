@@ -70,16 +70,16 @@ const blog: FC<BlogProps> = ({ posts }) => {
                       src={blogImage}
                       width={320}
                       height={320}
-                      className="rounded-xl w-[20rem] h-[20rem]"
+                      className="rounded-xl w-[18rem] h-[18rem]"
                     />
                     <div>
                       <p className="my-2 text-gray-500 font-thin">
                         Posted on {date}
                       </p>
-                      <h2 className="text-2xl font-semibold my-5 max-w-[20rem]">
+                      <h2 className="text-2xl font-semibold my-5 max-w-[18rem]">
                         {title}
                       </h2>
-                      <p className="font-light mb-5 max-w-[20rem]">
+                      <p className="font-light mb-5 max-w-[18rem]">
                         {shortDescription}
                       </p>
                       <Link
