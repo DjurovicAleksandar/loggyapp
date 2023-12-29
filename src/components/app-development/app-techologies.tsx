@@ -51,11 +51,13 @@ const AppTechnologies = () => {
               key={technology.id}
               className="flex flex-col items-center md:items-start gap-y-5 w-full md:mx-14 p-6"
             >
-              <h3 className="flex text-4xl text-center mx-auto text-primary font-extrabold w-full">
+              <h3 className="text-4xl text-center md:text-left mx-auto text-primary font-extrabold w-full">
                 {technology.category}
               </h3>
-              <p className="w-[80%]">{technology.paragraph}</p>
-              <div className="flex flex-col items-center w-full mt-6">
+              <p className="w-full md:w-[80%] text-center md:text-left">
+                {technology.paragraph}
+              </p>
+              <div className="flex flex-col items-center md:items-start justify-center w-full mx-auto mt-6">
                 <ul className="grid md:grid-cols-2 md:grid-rows-3 gap-y-4">
                   {technology.languages.map((language) => (
                     <li key={language.id} className="text-2xl">
