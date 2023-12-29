@@ -20,7 +20,6 @@ const NavigationList: FC<NavListProps> = ({ openServices, onOpenServices }) => {
         >
           <span className="group-hover:text-primary ">
             <span className="mr-1">Services</span>
-            {openServices ? <span>&#11105;</span> : <span>&#11107;</span>}
           </span>
           {openServices && <NavServices />}
         </li>

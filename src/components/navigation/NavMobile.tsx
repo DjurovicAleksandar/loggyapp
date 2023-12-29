@@ -21,7 +21,6 @@ const NavMobile: FC<NavMobileProps> = ({ onOpenServices, openServices }) => {
       >
         <span className="group-hover:text-primary ">
           <span className="mr-2">Services</span>
-          {openServices ? <span>&#11105;</span> : <span>&#11107;</span>}
         </span>
       </li>
       {openServices && (
