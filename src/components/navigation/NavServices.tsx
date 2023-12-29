@@ -1,13 +1,24 @@
 import { useEffect, useState } from "react";
 import NavServicesList from "./NavServicesList";
 import Link from "next/link";
-import { Post, fetchLatestPosts } from "../utils/utilsFunctions";
-
 const NavServices = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetchLatestPosts(setPosts);
+    const fetchLatestPosts = async () => {
+      try {
+        const response = await fetch("/api/posts");
+        if (!response.ok) {
+          throw new Error("Failed to fetch latest posts");
+        }
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching latest posts:", error);
+      }
+    };
+
+    fetchLatestPosts();
   }, []);
 
   return (

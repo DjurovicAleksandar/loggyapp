@@ -1,7 +1,4 @@
 import Image from "next/image";
-import matter from "gray-matter";
-import fs from "fs";
-import path from "path";
 import { type FC } from "react";
 import Link from "next/link";
 import { getAllPosts } from "./api/postFetch";
