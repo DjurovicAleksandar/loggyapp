@@ -44,7 +44,7 @@ const teamInfo: Team[] = [
 
 const MeetTheTeam = () => {
   return (
-    <div className="pt-[200px] w-full h-full bg-bgColor">
+    <div className="pt-[200px] pb-[100px] w-full h-full bg-bgColor">
       <div className="flex flex-col items-center w-[80%] mx-auto h-full">
         <div className="flex flex-col items-center justify-center ">
           <h1 className="text-5xl font-extrabold text-center mb-8 ">
