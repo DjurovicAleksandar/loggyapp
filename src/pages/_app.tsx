@@ -1,13 +1,15 @@
 import "@/styles/globals.css";
+import { Inter } from "next/font/google";
 import type { AppProps } from "next/app";
 import Footer from "@/components/footer/Footer";
 import Nav from "@/components/navigation/Nav";
 import { useState } from "react";
 import Modal from "@/components/general/Modal";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showModal, setShowModal] = useState(false);
-  const [openServices, setOpenServices] = useState(false);
+
   const [modalContent, setModalContent] = useState<React.ReactNode | null>(
     null
   );
@@ -18,13 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <>
-      <Nav
-        handleShowModal={handleShowModal}
-        showModal={showModal}
-        openServices={openServices}
-        onOpenServices={setOpenServices}
-      />
+    <div className={`${inter.className} `}>
+      <Nav handleShowModal={handleShowModal} showModal={showModal} />
       <Component
         {...pageProps}
         showModal={showModal}
@@ -32,6 +29,6 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <Footer />
       {showModal && <Modal content={modalContent} />}
-    </>
+    </div>
   );
 }

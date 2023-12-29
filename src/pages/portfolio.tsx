@@ -1,97 +1,7 @@
-import { Inter } from "next/font/google";
-import portfolio1 from "@/assets/images/home/portfolio1.jpg";
 import Image from "next/image";
 import { type FC } from "react";
 import PortfolioContent from "@/components/portfolio/PortfolioContent";
-
-const inter = Inter({ subsets: ["latin"] });
-
-const projects = [
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-    ],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website X",
-    projectImages: [
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-    ],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website Y",
-    projectImages: [
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-    ],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website O",
-    projectImages: [
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-    ],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website A",
-    projectImages: [
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-    ],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
-  },
-  {
-    projectCategory: "Development",
-    projectName: "Website B",
-    projectImages: [
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-      { original: portfolio1, thumbnail: portfolio1 },
-    ],
-    projectShortDescription: "Lorem ipsum dolorem suit",
-    projectDescription:
-      "Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit Lorem ipsum dolorem suit.",
-  },
-];
+import { projects } from "@/data/ProjectsDb";
 
 interface PortoflioProps {
   handleShowModal: (
@@ -104,9 +14,7 @@ interface PortoflioProps {
 
 const portfolio: FC<PortoflioProps> = ({ handleShowModal, showModal }) => {
   return (
-    <main
-      className={`${inter.className} w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX `}
-    >
+    <main className={` w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX `}>
       <div className="lg:mb-[10rem]">
         <h1 className="font-bold text-4xl lg:text-8xl lg:w-4/5 mb-5">
           Revolutionizing digital experience! Check our projects!

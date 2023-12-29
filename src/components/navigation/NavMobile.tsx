@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { type FC, useState } from "react";
-import { navServices } from "./NavServicesDb";
+import { navServices } from "../../data/NavServicesDb";
 
 interface NavMobileProps {
   onOpenServices: (showModal: boolean) => void;
