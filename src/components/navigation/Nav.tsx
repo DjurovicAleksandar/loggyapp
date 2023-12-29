@@ -1,5 +1,6 @@
 import { type FC, useState, useEffect } from "react";
 import NavServices from "./NavServices";
+import Link from "next/link";
 
 interface NavProps {
   onShowModal: (showModal: boolean) => void;
@@ -39,9 +40,12 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
       <h2 className="logo font-bold text-primary">LOGGY</h2>
       <ul className=" gap-5 text-black hidden md:flex">
         <li>
-          <a href="#" className="hover:text-primary duration-300 ease-linear">
+          <Link
+            href="/#"
+            className="hover:text-primary duration-300 ease-linear"
+          >
             Home
-          </a>
+          </Link>
         </li>
         <li
           className="group duration-300 ease-linear cursor-pointer relative"
@@ -56,9 +60,12 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
           {openServices && <NavServices />}
         </li>
         <li>
-          <a href="#" className="hover:text-primary duration-300 ease-linear">
+          <Link
+            href="/about-us"
+            className="hover:text-primary duration-300 ease-linear"
+          >
             About
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#" className="hover:text-primary duration-300 ease-linear">
@@ -66,12 +73,12 @@ const Nav: FC<NavProps> = ({ onShowModal, showModal }) => {
           </a>
         </li>
       </ul>
-      <a
+      <Link
         href="#"
         className=" hidden md:block duration-300 ease-linear font-bold text-primary"
       >
         Get in touch
-      </a>
+      </Link>
       <div
         onClick={() => onShowModal(!showModal)}
         className="md:hidden cursor-pointer group"
