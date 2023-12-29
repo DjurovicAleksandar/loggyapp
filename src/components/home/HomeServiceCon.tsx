@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import header1 from "@/assets/images/home/header1.jpg";
-import SectionLayout from "@/components/general/SectionLayout";
+
 import { type FC } from "react";
 import HomeServiceConImage from "./HomeServiceConImage";
 
@@ -28,8 +27,8 @@ const HomeServiceCon: FC<HomeServiceConProps> = ({
 }) => {
   return (
     <div
-      className={`md:flex   ${
-        direction === "right" ? "flex-row-reverse" : "bg-gray-50 lg:h-[80vh]"
+      className={`xl:flex   ${
+        direction === "right" ? "flex-row-reverse" : "bg-gray-50 py-28"
       } items-center justify-between  mb-10 md:mb-[10rem] px-padXMobile lg:px-padX`}
     >
       <div

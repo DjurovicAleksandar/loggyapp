@@ -20,7 +20,7 @@ const HomeServiceConImage: FC<HomeServiceConImageProps> = ({
         <Image
           alt="img1"
           src={projectImg}
-          className="rounded-xl w-full h-auto md:w-[20rem]"
+          className="rounded-xl w-full h-auto md:w-[20rem] max-w-[20rem]"
         />
         <div>
           <h3 className=" font-bold my-5 lg:my-2 lg:text-2xl lg:mt-8 text-primary">

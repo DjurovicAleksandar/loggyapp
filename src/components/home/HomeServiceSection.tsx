@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import header1 from "@/assets/images/home/header1.jpg";
-import SectionLayout from "@/components/general/SectionLayout";
 import HomeServiceCon from "./HomeServiceCon";
 
 const servicesArray = [
