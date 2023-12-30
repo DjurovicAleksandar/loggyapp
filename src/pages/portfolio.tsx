@@ -1,22 +1,15 @@
 import Image from "next/image";
-import { type FC } from "react";
 import PortfolioContent from "@/components/portfolio/PortfolioContent";
 import { projects } from "@/data/ProjectsDb";
+import { useModal } from "@/components/general/ModalContext";
 
-interface PortoflioProps {
-  handleShowModal: (
-    showModal: boolean,
-    modalContent: React.ReactNode | null
-  ) => void;
+const Portfolio = () => {
+  const { showModal, setShowModal } = useModal();
 
-  showModal: boolean;
-}
-
-const portfolio: FC<PortoflioProps> = ({ handleShowModal, showModal }) => {
   return (
     <main className={` w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX `}>
       <div className="lg:mb-[10rem]">
-        <h1 className="font-bold text-4xl lg:text-8xl lg:w-4/5 mb-5">
+        <h1 className="text-4xl lg:text-8xl lg:w-4/5 mb-5">
           Revolutionizing digital experience! Check our projects!
         </h1>
       </div>
@@ -35,14 +28,14 @@ const portfolio: FC<PortoflioProps> = ({ handleShowModal, showModal }) => {
             return (
               <div
                 onClick={() =>
-                  handleShowModal(
+                  setShowModal(
                     !showModal,
                     <PortfolioContent
                       projectCategory={projectCategory}
                       projectName={projectName}
                       projectImages={projectImages}
                       projectDescription={projectDescription}
-                      handleShowModal={handleShowModal}
+                      handleShowModal={setShowModal}
                     />
                   )
                 }
@@ -68,4 +61,6 @@ const portfolio: FC<PortoflioProps> = ({ handleShowModal, showModal }) => {
   );
 };
 
-export default portfolio;
+export default function portfolio() {
+  return <Portfolio />;
+}

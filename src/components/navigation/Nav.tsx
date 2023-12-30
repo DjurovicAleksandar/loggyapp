@@ -1,22 +1,15 @@
-import { type FC, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import NavLogo from "./NavLogo";
 import NavigationList from "./NavigationList";
 import NavBurgerMenu from "./NavBurgerMenu";
+import { useModal } from "../general/ModalContext";
 
-interface NavProps {
-  handleShowModal: (
-    showModal: boolean,
-    modalContent: React.ReactNode | null
-  ) => void;
-
-  showModal: boolean;
-}
-
-const Nav: FC<NavProps> = ({ handleShowModal, showModal }) => {
+const Nav = () => {
   const [scrolledFromTop, setScrolledFromTop] = useState(false);
   const [openServices, setOpenServices] = useState(false);
   const router = useRouter();
+  const { showModal, setShowModal } = useModal();
 
   useEffect(() => {
     /* Function that will close services on scroll or page change, and change opacity of navibation bar if scrolled from top */
@@ -60,7 +53,7 @@ const Nav: FC<NavProps> = ({ handleShowModal, showModal }) => {
         openServices={openServices}
         onOpenServices={setOpenServices}
         showModal={showModal}
-        handleShowModal={handleShowModal}
+        handleShowModal={setShowModal}
       />
     </nav>
   );

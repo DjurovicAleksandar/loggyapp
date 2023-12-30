@@ -16,3 +16,15 @@
   width: 400px;
   height: 400px;
 }
+
+.my-image-gallery.fullscreen-mode img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .my-image-gallery img {
+    width: 200px;
+    height: 200px;
+  }
+}
