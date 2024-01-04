@@ -3,7 +3,7 @@ import SectionLayout from "@/components/general/SectionLayout";
 export default function HomeDigitalPresenceSection() {
   return (
     <SectionLayout>
-      <h2 className="font-thin text-center text-4xl md:text-6xl">
+      <h2 className="font-thin text-center text-4xl md:text-6xl my-10">
         We&apos;ll craft <span className=" font-bold">the solution</span> to
         elevate
         <br /> your digital presence

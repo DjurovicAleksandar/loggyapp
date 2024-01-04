@@ -49,7 +49,7 @@ export default function HomeHeader() {
             src={header1}
             className="w-[12rem] h-[15rem]  md:w-[20rem] -translate-y-20 translate-x-5 lg:translate-x-0  md:h-auto rounded-xl  md:-translate-y-40"
           />
-        </div>
+        </div>{" "}
       </div>
       {/* Background image */}
       <div className="w-full h-full">

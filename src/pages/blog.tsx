@@ -57,7 +57,7 @@ const blog: FC<BlogProps> = ({ posts }) => {
               </Link>
             </div>
             <div className="w-full flex items-center justify-center gap-4 flex-wrap mt-5 lg:mt-0">
-              {arr.map(({ blogFront, slug }, j) => {
+              {arr.slice(0, 3).map(({ blogFront, slug }, j) => {
                 const id = Math.floor(Math.random() * 20);
                 const { title, date, shortDescription, blogImage } = blogFront;
 

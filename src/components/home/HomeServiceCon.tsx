@@ -28,7 +28,7 @@ const HomeServiceCon: FC<HomeServiceConProps> = ({
   return (
     <div
       className={`xl:flex   ${
-        direction === "right" ? "flex-row-reverse" : "bg-gray-50 py-28"
+        direction === "right" && "flex-row-reverse bg-gray-50 py-28"
       } items-center justify-between  mb-10 md:mb-[10rem] px-padXMobile lg:px-padX`}
     >
       <div

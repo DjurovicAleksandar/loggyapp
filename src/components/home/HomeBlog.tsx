@@ -1,4 +1,3 @@
-import { height } from "@mui/system";
 import Image, { StaticImageData } from "next/image";
 import { type FC } from "react";
 
@@ -37,7 +36,7 @@ const HomeBlog: FC<HomeBlogProps> = ({
         <div>
           <h3
             className={`text-primary text-2xl font-medium lg:text-3xl ${
-              colWidth && "w-1/2"
+              colWidth && "w-full lg:w-1/2"
             }`}
           >
             {blogTitle}

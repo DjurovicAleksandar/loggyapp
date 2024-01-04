@@ -1,6 +1,6 @@
 const Footer3rdBlock = () => {
   return (
-    <div className=" px-padXMobile py-padYMobile md:py-padY border-y-[1px] md:px-padX flex justify-between">
+    <div className=" px-padXMobile py-padYMobile md:py-padY  md:px-padX flex justify-between bg-[#2e1065] text-white">
       {/* Logo */}
       <div>
         <p>LOGGY</p>
