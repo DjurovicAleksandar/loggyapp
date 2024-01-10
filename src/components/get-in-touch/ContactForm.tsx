@@ -16,21 +16,18 @@ export default function ContactForm() {
     e.preventDefault();
     try {
       const response = await axios.post("/api/emailSend", formData);
-      response.data.message;
-      // Setting formSucces
-      if (response.status === 200) {
-        setFormError("");
-        setFormSuccess(true);
-        // Clear form data upon
-        setFormData({
-          fullName: "",
-          email: "",
-          message: "",
-          agreeTerms: false,
-        });
 
-        setTimeout(() => setFormSuccess(false), 2000);
-      }
+      setFormError("");
+      setFormSuccess(true);
+      // Clear form data
+      setFormData({
+        fullName: "",
+        email: "",
+        message: "",
+        agreeTerms: false,
+      });
+
+      setTimeout(() => setFormSuccess(false), 2000);
     } catch (err: any) {
       let errorMessage = "Error sending email";
       if (err.response) {
@@ -67,7 +64,7 @@ export default function ContactForm() {
     >
       <input
         placeholder="Full name *"
-        className="border-[1px] border-gray-100 rounded-full p-4 bg-gray-50 w-full"
+        className={`border-[1px] border-gray-100 rounded-full p-4 bg-gray-50 w-full`}
         required
         name="fullName"
         value={formData.fullName}
@@ -75,7 +72,7 @@ export default function ContactForm() {
       />
       <input
         placeholder="Email *"
-        className="border-[1px] border-gray-100 rounded-full p-4 bg-gray-50 w-full"
+        className={`border-[1px] border-gray-100 rounded-full p-4 bg-gray-50 w-full`}
         required
         name="email"
         value={formData.email}
@@ -83,7 +80,7 @@ export default function ContactForm() {
       />
       <textarea
         placeholder="What's the primary concern we need to prioritize? *"
-        className="rounded-lg px-4 py-8 bg-gray-50 w-full h-[15rem] resize-none borde"
+        className={`rounded-lg px-4 py-8 bg-gray-50 w-full h-[15rem] resize-none`}
         name="message"
         value={formData.message}
         onChange={handleChange}
@@ -93,6 +90,7 @@ export default function ContactForm() {
           type="checkbox"
           id="agreeTerms"
           name="agreeTerms"
+          required
           checked={formData.agreeTerms}
           onChange={(e) =>
             setFormData((prevData) => ({
@@ -106,7 +104,7 @@ export default function ContactForm() {
       <input
         type="submit"
         value="Send message"
-        className="mt-4 bg-primary text-white font-semibold rounded-xl p-4"
+        className="mt-4 bg-primary text-white font-semibold rounded-xl p-4 cursor-pointer"
       />{" "}
       {formError !== "" && (
         <p className="text-lg font-light text-red-400 ">{formError}</p>

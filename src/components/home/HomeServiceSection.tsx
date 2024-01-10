@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { serviceArray } from "@/data/NavServicesDb";
-
 import HomeServiceCon from "./HomeServiceCon";
 
 const excludedTitles = [

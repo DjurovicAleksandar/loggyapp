@@ -10,16 +10,28 @@ interface PostPageProps {
     date: string;
     shortDescription: string;
     blogImage: string;
+    writter: string;
+    writterDescription: string;
+    writterImage: string;
   };
   content: string;
-  slug: string;
 }
 
-const PostPage: FC<PostPageProps> = ({ blogFront, content, slug }) => {
-  const { title, date, shortDescription, blogImage } = blogFront;
+const PostPage: FC<PostPageProps> = ({ blogFront, content }) => {
+  const {
+    title,
+    date,
+    shortDescription,
+    blogImage,
+    writter,
+    writterDescription,
+    writterImage,
+  } = blogFront;
+
+  console.log(writter);
 
   return (
-    <div className="w-screen bg-gray-50 px-padXMobile lg:px-padX  py-padYMobile pt-40 lg:pt-60 flex flex-col items-center justify-center gap-40">
+    <div className=" bg-gray-50 px-padXMobile lg:px-padX  py-padYMobile pt-40 lg:pt-60 flex flex-col items-center justify-center gap-40 overflow-hidden">
       {/* Post header */}
       <div className="w-full flex-col lg:flex-row flex justify-between items-center">
         {/* Text header */}
@@ -40,11 +52,28 @@ const PostPage: FC<PostPageProps> = ({ blogFront, content, slug }) => {
         </div>
       </div>
       {/* Post body */}
-      <div>
+      <div className="w-4/5 mx-auto">
         <div
+          className="flex flex-col gap-5"
           dangerouslySetInnerHTML={{ __html: marked(content) }}
-          className="text-justify font-base "
         ></div>
+        <div className="h-[1px] w-full bg-primary mt-10 mb-5"></div>
+        <div className="mb-10">
+          <p className="text-xl font-medium mb-5">Written by</p>
+          <div className="flex items-start gap-5 ">
+            <Image
+              src={writterImage}
+              alt={writter}
+              width={100}
+              height={100}
+              className="w-[12rem] h-auto"
+            />
+            <div>
+              <h2 className="font-medium">{writter}</h2>
+              <p className="font-light w-4/5 text-sm">{writterDescription}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -69,7 +98,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const allPosts = getAllPosts();
 
   // Find the post with the matching slug
-  const post = allPosts.find((post) => post.slug === slug);
+
+  const post = allPosts.find((post: any) => post.slug === slug);
 
   if (!post) {
     return {

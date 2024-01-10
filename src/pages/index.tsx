@@ -50,11 +50,12 @@ const Home: FC<HomeProps> = ({ posts }) => {
   }, [scrollY]);
 
   return (
-    <main className={`w-full`}>
+    <main className={`w-full relative`}>
       <HomeHeader />
       <HomeMarqueeSection />
       <HomeDigitalPresenceSection />
       <HomeServiceSection />
+
       <HomeLaptopSection />
       <HomeBlogSection posts={posts} />
       <HomeContactSection id="home-contact-section" />

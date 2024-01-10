@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FC, useState } from "react";
 
 interface ButtonProps {
@@ -22,9 +23,9 @@ const Button: FC<ButtonProps> = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <a
+    <Link
       href={href}
-      className={`border-[1px] border-primary rounded-xl hover:bg-[${bgColorHover}] duration-300 ease-linear`}
+      className={`border-[1px] border-primary rounded-xl hover:bg-[${bgColorHover}] duration-300 ease-linear hover:scale-110 active:scale-90`}
       style={{
         color: isHovered ? textColorHover : textColor,
         backgroundColor: isHovered ? bgColorHover : bgColor,
@@ -34,7 +35,7 @@ const Button: FC<ButtonProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {text}
-    </a>
+    </Link>
   );
 };
 
