@@ -14,39 +14,42 @@ export type accordionType = {
 const accordion: accordionType[] = [
   {
     id: 1,
-    typography: "Can you start right away?",
+    typography: "What are Your primary business objectives and goals?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "What are You aiming to achieve with Your business, and what specific goals do You have in mind? Understanding Your overarching objectives helps us tailor our strategies to align with Your vision and drive measurable success.",
   },
   {
     id: 2,
-    typography: "Can you start right away?",
+    typography:
+      "Who is Your target audience, and what is Your unique selling proposition?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Tell us about the audience You want to capture and the unique qualities that make Your business shine. Who are Your ideal customers, and what makes Your product or service irresistible to them? Unraveling these details helps us tailor our approach to effectively reach and engage Your target market.",
   },
   {
     id: 3,
-    typography: "Can you start right away?",
+    typography:
+      "What specific actions or behaviors do you want users to take on your platform?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Envision the user journey on Your platform. What specific actions or behaviors do You aim to inspire? Whether it's making a purchase, signing up, or exploring content, understanding Your desired user interactions guides us in crafting a user experience that aligns seamlessly with Your goals.",
   },
   {
     id: 4,
-    typography: "Can you start right away?",
+    typography: "What is your preferred timeline for project completion?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Share your ideal schedule for project completion. By knowing your preferred timeline, we can synchronize our efforts to ensure timely delivery and meet your expectations efficiently. This insight helps us tailor our workflow to align with your specific timeframe.",
   },
   {
     id: 5,
-    typography: "Can you start right away?",
+    typography:
+      "What is your preferred content management system (CMS) if any?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Regarding content management, do you have a preferred Content Management System (CMS) in mind, or are you open to recommendations? Understanding your CMS preference, if any, helps us tailor our development approach to integrate seamlessly with your chosen platform or provide suitable suggestions based on your needs.",
   },
 ];
 
 const AccordionContainer = () => {
   return (
-    <div className="w-full h-full bg-bgColor py-[200px]">
+    <div className="w-full h-full py-[200px]">
       <div className="w-[80%] items-center justify-start mb-20 px-6 mx-auto">
         <h1 className="text-5xl font-extrabold ">
           Discover things that you are <br /> interested in with us.
@@ -62,7 +65,7 @@ const AccordionContainer = () => {
             >
               <Typography
                 variant="h4"
-                className="capitalize font-bold text-xl text-primary"
+                className="font-bold text-xl text-primary"
               >
                 {items.typography}
               </Typography>

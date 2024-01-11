@@ -12,9 +12,9 @@ module.exports = {
     extend: {
       colors: {
         bgColor: "#fffafa",
-        primary: "#ea7210",
+        primary: "#584e6b",
         grayCol: "#D1D5DB",
-        secondary: "#ffb100",
+        secondary: "#CD5888",
       },
       padding: {
         padY: "64px",
