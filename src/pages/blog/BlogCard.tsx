@@ -18,6 +18,8 @@ const BlogCard: FC<BlogCardProps> = ({
   shortDescription,
   slug,
 }) => {
+  const slicedShortDescription = shortDescription.slice(0, 97) || "";
+
   return (
     <div className="group hover:scale-105 duration-300 ease-in-out relative rounded-xl p-4">
       <Link className="rounded-xl" href={`/blog/${slug}`}>
@@ -39,7 +41,7 @@ const BlogCard: FC<BlogCardProps> = ({
           </p>
           <h2 className="text-2xl font-semibold my-5 max-w-[18rem]">{title}</h2>
           <p className="font-light mb-5 max-w-[18rem]">
-            {shortDescription.slice(0, 97)}...
+            {slicedShortDescription}...
           </p>
         </div>
       </Link>
