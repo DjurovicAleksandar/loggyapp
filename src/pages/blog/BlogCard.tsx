@@ -18,7 +18,8 @@ const BlogCard: FC<BlogCardProps> = ({
   shortDescription,
   slug,
 }) => {
-  const slicedShortDescription = shortDescription.slice(0, 97) || "";
+  const slicedShortDescription =
+    shortDescription.slice(0, 97) ?? shortDescription;
 
   return (
     <div className="group hover:scale-105 duration-300 ease-in-out relative rounded-xl p-4">
