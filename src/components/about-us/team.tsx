@@ -13,38 +13,44 @@ const teamInfo: Team[] = [
   {
     id: 1,
     imageUrl: markoMarkovic,
-    position: "director",
-    name: "marko markovic",
+    position: "ui | ux designer",
+    name: "micic bojan",
   },
   {
     id: 2,
     imageUrl: markoMarkovic,
-    position: "director",
-    name: "marko markovic",
+    position: "frontend engineer",
+    name: "djurovic aleksandar",
   },
   {
     id: 3,
     imageUrl: markoMarkovic,
-    position: "director",
-    name: "marko markovic",
+    position: "frontend engineer",
+    name: "bujak davor",
   },
   {
     id: 4,
     imageUrl: markoMarkovic,
-    position: "director",
-    name: "marko markovic",
+    position: "video editor",
+    name: "skrba pavle",
   },
   {
     id: 5,
     imageUrl: markoMarkovic,
-    position: "director",
+    position: "backend engineer",
+    name: "milunka savic",
+  },
+  {
+    id: 6,
+    imageUrl: markoMarkovic,
+    position: "web designer",
     name: "marko markovic",
   },
 ];
 
 const MeetTheTeam = () => {
   return (
-    <div className="pt-[200px] pb-[100px] w-full h-full bg-bgColor">
+    <div className="pt-[200px] pb-[100px] w-full h-full">
       <div className="flex flex-col items-center w-[80%] mx-auto h-full">
         <div className="flex flex-col items-center justify-center ">
           <h1 className="text-5xl font-extrabold text-center mb-8 ">
@@ -64,12 +70,12 @@ const MeetTheTeam = () => {
                 alt={member.name}
                 className="border-2 border-black mb-6 shadow-lg rounded-xl"
               />
-              <h4 className="uppercase font-extrabold opacity-30">
-                {member.position}
-              </h4>
-              <h3 className="capitalize font-bold text-primary text-2xl pt-2">
+              <h3 className="capitalize font-bold text-primary text-2xl">
                 {member.name}
               </h3>
+              <h4 className="uppercase font-extrabold pt-2 opacity-30">
+                {member.position}
+              </h4>
               <div className="flex w-[15%] border-b-2 opacity-50 mt-2 border-primary shadow-md"></div>
             </div>
           ))}

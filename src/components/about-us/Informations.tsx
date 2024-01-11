@@ -26,14 +26,12 @@ const infoCard: Info[] = [
 
 const Informations = () => {
   return (
-    <div className="relative block bottom-0 translate-y-1/2 bg-white shadow-xl w-[60%] mx-auto rounded-xl py-10">
-      <div className="flex  flex-wrap items-center justify-around h-full">
+    <div className="relative block bottom-0 translate-y-1/2 bg-gradient-to-r from-primary to-secondary shadow-xl w-[60%] mx-auto rounded-xl py-10">
+      <div className="flex flex-wrap items-center justify-around h-full">
         {infoCard.map((info) => (
           <div key={info.id} className="flex flex-col items-center gap-y-3">
-            <h3 className="text-4xl text-primary font-extrabold">
-              {info.stats}
-            </h3>
-            <p className="font-extrabold uppercase opacity-30 tracking-wider">
+            <h3 className="text-4xl text-white font-extrabold">{info.stats}</h3>
+            <p className="font-extrabold uppercase text-white opacity-50 tracking-wider">
               {info.title}
             </p>
           </div>
