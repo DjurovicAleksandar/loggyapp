@@ -1,8 +1,9 @@
-import { GetStaticProps, GetStaticPaths } from "next";
-import { FC } from "react";
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { useState, type FC } from "react";
+import { getLatestPosts, getPostsByCategory } from "../api/postFetch";
+import BlogCard from "../blog/BlogCard";
+import Button from "@/components/general/Button";
 import Link from "next/link";
-import Image from "next/image";
-import { getAllPosts, getPostsByCategory } from "../api/postFetch";
 
 interface CategoriesProps {
   posts: {
@@ -19,53 +20,73 @@ interface CategoriesProps {
 }
 
 const CategoriesPage: FC<CategoriesProps> = ({ posts, category }) => {
+  const [postArr, setPostArr] = useState(posts);
+  const [loadedCount, setLoadedCount] = useState(3);
+  const [errorMessage, setErrorMessage] = useState("");
+  const fetchCategory = postArr[0].blogFront.category;
+
+  const loadMorePosts = async () => {
+    const sliceStart = loadedCount;
+    const sliceEnd = sliceStart + 6;
+    //sending query paramters via api call
+    const additionalPosts = await fetch(
+      `/api/posts?end=${sliceEnd}&start=${sliceStart}&category=${fetchCategory}`
+    );
+
+    const newPosts = await additionalPosts.json();
+
+    if (newPosts.length === 0) {
+      setErrorMessage(
+        "You have reached the end of available posts. Please check other categories"
+      );
+      return;
+    }
+
+    setPostArr((prevPosts) => [...prevPosts, ...newPosts]);
+    setLoadedCount(sliceEnd);
+  };
+
   return (
-    <main className="w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX flex flex-wrap items-center justify-center gap-10">
-      <h1 className="text-4xl font-bold">{category.toUpperCase()}</h1>
+    <main className="w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX">
+      <h1 className="text-4xl lg:text-6xl mb-14 ">{category.toUpperCase()}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map(({ blogFront, slug }) => (
-          <div key={slug} className="p-4 border rounded-md">
-            <Image
-              src={blogFront.blogImage}
-              alt={blogFront.title}
-              width={320}
-              height={320}
-              className="rounded-xl w-[20rem] h-[20rem] mb-2"
+        {postArr.map(({ blogFront, slug }) => {
+          const { title, date, shortDescription, blogImage } = blogFront;
+          return (
+            <BlogCard
+              key={slug}
+              title={title}
+              date={date}
+              shortDescription={shortDescription}
+              slug={slug}
+              blogImage={blogImage}
             />
-            <p className="text-gray-500 mb-4">{blogFront.date}</p>
-            <h2 className="text-xl font-bold mb-2">{blogFront.title}</h2>
-            <p className="mb-10 text-gray-500">{blogFront.shortDescription}</p>
-            <Link
-              style={{
-                background: "#ea7210",
-                padding: "10px",
-                borderRadius: "12px",
-                color: "white",
-              }}
-              href={`/blog/${slug}`}
-            >
-              Read more
-            </Link>
-          </div>
-        ))}
+          );
+        })}
       </div>
+      <div className="w-full flex items-center justify-center">
+        <button
+          onClick={loadMorePosts}
+          className="hover:scale-110 active:scale-90 duration-300 ease-linearborder-[1px] border-primary rounded-xl bg-primary text-white  font-bold p-4 "
+        >
+          Load more
+        </button>
+      </div>
+      <p className="text-center mt-10 font-thin">
+        {errorMessage.split(".")[0] + "."}{" "}
+        <Link href="/blog" className="underline font-light curosr-pointer">
+          {errorMessage.split(".")[1]}
+        </Link>
+      </p>
     </main>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const allPosts = getAllPosts();
+  const latestPosts = getLatestPosts();
 
-  // Extract categories from all posts
-  const categories = allPosts.map((post) =>
-    post.blogFront.category.toLowerCase()
-  );
-
-  // Deduplicate and create paths for each category
-  const uniqueCategories = Array.from(new Set<string>(categories));
-
-  const paths = uniqueCategories.map((category) => ({
-    params: { slug: category },
+  const paths = Object.keys(latestPosts).map((category) => ({
+    params: { slug: category.toLowerCase() },
   }));
 
   return {
@@ -75,11 +96,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params ?? { slug: "" };
+  const { slug }: any | string = params ?? { slug: "" };
 
-  const categorySlug = Array.isArray(slug) ? slug[0] : slug || "";
-
-  const posts = getPostsByCategory(categorySlug);
+  const posts = getPostsByCategory(slug, 0, 3);
 
   return {
     props: {

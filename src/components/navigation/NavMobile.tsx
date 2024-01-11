@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { type FC, useState } from "react";
-import { navServices } from "../../data/NavServicesDb";
+import { type FC, } from "react";
+import { serviceArray } from "../../data/NavServicesDb";
 
 interface NavMobileProps {
   onOpenServices: (showModal: boolean) => void;
@@ -25,7 +25,7 @@ const NavMobile: FC<NavMobileProps> = ({ onOpenServices, openServices }) => {
       </li>
       {openServices && (
         <div className="flex flex-col gap-2">
-          {navServices.map(({ serviceTitle, href }, i) => {
+          {serviceArray.map(({ serviceTitle, href }, i) => {
             return (
               <Link
                 className="text-base font-light hover:text-primary"

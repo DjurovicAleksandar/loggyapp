@@ -8,9 +8,6 @@ interface BlogFront {
   shortDescription: string;
   blogImage: string;
   category: string;
-  writter: string;
-  writterDescription: string;
-  writterImage: string;
 }
 
 interface Post {
@@ -21,6 +18,16 @@ interface Post {
 
 interface LatestPostsByCategory {
   [key: string]: Post[];
+}
+
+//
+
+interface LoadMorePostsProps {
+  loadedCount: number;
+  fetchCategory: string;
+  setErrorMessage: (errorMessage: string) => void;
+  setPostArr: React.Dispatch<React.SetStateAction<any[]>>;
+  setLoadedCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
 //fetch all posts
@@ -42,9 +49,6 @@ export function getAllPosts(): Post[] {
       shortDescription: frontmatter.shortDescription || "",
       blogImage: frontmatter.blogImage || "",
       category: frontmatter.category || "",
-      writter: frontmatter.writter || "",
-      writterDescription: frontmatter.writterDescription || "",
-      writterImage: frontmatter.writterImage || "",
     };
 
     return {
@@ -86,3 +90,30 @@ export function getLatestPosts() {
 
   return latestPostsByCategory;
 }
+
+export const loadMorePosts = async ({
+  loadedCount,
+  fetchCategory,
+  setErrorMessage,
+  setPostArr,
+  setLoadedCount,
+}: LoadMorePostsProps) => {
+  const sliceStart = loadedCount;
+  const sliceEnd = sliceStart + 6;
+  //sending query paramters via api call
+  const additionalPosts = await fetch(
+    `/api/posts?end=${sliceEnd}&start=${sliceStart}&category=${fetchCategory}`
+  );
+
+  const newPosts = await additionalPosts.json();
+
+  if (newPosts.length === 0) {
+    setErrorMessage(
+      "You have reached the end of available posts. Please check other categories"
+    );
+    return;
+  }
+
+  setPostArr((prevPosts) => [...prevPosts, ...newPosts]);
+  setLoadedCount(sliceEnd);
+};

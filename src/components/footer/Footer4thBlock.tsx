@@ -1,6 +1,6 @@
 const Footer4thBlock = () => {
   return (
-    <div className="border-y-[1px] px-padXMobile md:px-padX py-4 flex items-center justify-center">
+    <div className=" px-padXMobile md:px-padX py-4 flex items-center justify-center bg-[#2e1065] text-white">
       © 2023 - 2024{" "}
       <a href="#" className="mx-1">
         LOGGY
