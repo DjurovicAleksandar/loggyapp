@@ -1,6 +1,6 @@
 import { type FC } from "react";
-
 import NavMobile from "@/components/navigation/NavMobile";
+
 interface NavBurgerMenuProps {
   handleShowModal: (
     showModal: boolean,

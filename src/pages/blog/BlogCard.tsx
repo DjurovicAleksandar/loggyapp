@@ -21,7 +21,7 @@ const BlogCard: FC<BlogCardProps> = ({
   return (
     <div className="group hover:scale-105 duration-300 ease-in-out relative rounded-xl p-4">
       <Link className="rounded-xl" href={`/blog/${slug}`}>
-        <p className="text-primary z-10 absolute duration-300 ease-linear -top-8 opacity-0 left-5 group-hover:top-8 group-hover:opacity-100">
+        <p className="text-white font-semibold z-10 absolute duration-300 ease-in-out -top-8 opacity-0 left-10 group-hover:top-8 group-hover:opacity-100">
           Read more
         </p>
         <div className="rounded-xl w-[18rem] h-[18rem] overflow-hidden">
@@ -30,7 +30,7 @@ const BlogCard: FC<BlogCardProps> = ({
             src={blogImage}
             width={320}
             height={320}
-            className="w-full h-full rounded-xl duration-300 ease-in group-hover:scale-150"
+            className="w-full h-full rounded-xl duration-300 ease-in group-hover:scale-150 group-hover:blur-sm"
           />
         </div>
         <div>
@@ -38,7 +38,9 @@ const BlogCard: FC<BlogCardProps> = ({
             Posted on {date}
           </p>
           <h2 className="text-2xl font-semibold my-5 max-w-[18rem]">{title}</h2>
-          <p className="font-light mb-5 max-w-[18rem]">{shortDescription}</p>
+          <p className="font-light mb-5 max-w-[18rem]">
+            {shortDescription.slice(0, 97)}...
+          </p>
         </div>
       </Link>
     </div>

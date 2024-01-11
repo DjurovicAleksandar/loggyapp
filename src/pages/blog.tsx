@@ -19,8 +19,8 @@ const blog: FC<{ latestPosts: { [key: string]: any[] } }> = ({
               View all from {category.toLowerCase()}
             </Link>
           </div>
-          <div className="flex w-full lg:w-4/5 mx-auto  gap-10 overflow-hidden overflow-x-auto">
-            {posts.map(({ blogFront, slug }) => (
+          <div className="flex w-full lg:w-4/5 mx-auto gap-10 overflow-hidden overflow-x-auto xl:overflow-visible">
+            {posts.sort((a,b)=>a.blogFront.date-b.blogFront.date).map(({ blogFront, slug }) => (
               <BlogCard
                 key={slug}
                 title={blogFront.title}
