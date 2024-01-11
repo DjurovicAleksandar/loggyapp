@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { type FC } from "react";
 import Link from "next/link";
 
@@ -18,8 +17,8 @@ const BlogCard: FC<BlogCardProps> = ({
   shortDescription,
   slug,
 }) => {
-  const slicedShortDescription =
-    shortDescription.slice(0, 97) ?? shortDescription;
+  // const slicedShortDescription =
+  //   shortDescription.slice(0, 97) ?? shortDescription;
 
   return (
     <div className="group hover:scale-105 duration-300 ease-in-out relative rounded-xl p-4">
@@ -41,9 +40,7 @@ const BlogCard: FC<BlogCardProps> = ({
             Posted on {date}
           </p>
           <h2 className="text-2xl font-semibold my-5 max-w-[18rem]">{title}</h2>
-          <p className="font-light mb-5 max-w-[18rem]">
-            {slicedShortDescription}...
-          </p>
+          <p className="font-light mb-5 max-w-[18rem]">{shortDescription}</p>
         </div>
       </Link>
     </div>
