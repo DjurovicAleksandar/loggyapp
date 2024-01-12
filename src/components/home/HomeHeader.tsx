@@ -12,10 +12,15 @@ export default function HomeHeader() {
         <div className="w-full md:w-1/2 lg:w-full ">
           <h1 className="text-5xl xl:text-[5.5rem]">
             Upgrade your
-            <br /> <span className="text-primary font-bold">
+            <br />{" "}
+            <span className="bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent font-bold">
               Tech Stack
             </span>{" "}
-            with <span className="font-sedmibold text-primary">us</span>!
+            with{" "}
+            <span className="font-bold bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
+              us
+            </span>
+            !
           </h1>
           <p className="w-full  mt-4 ">
             Revamp Your Digital Presence with Expert UX/UI Design, Web
@@ -24,7 +29,7 @@ export default function HomeHeader() {
           </p>
           <div className="mt-8 flex gap-8">
             <Button text="Get in touch" />
-            <Button text="About us" textColor="#ea7210" bgColor="transparent" />
+            <Button text="About us" textColor="#584e6b" bgColor="transparent" />
           </div>
         </div>
         {/* Images */}

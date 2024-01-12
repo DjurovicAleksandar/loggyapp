@@ -26,7 +26,7 @@ const infoCard: Info[] = [
 
 const Informations = () => {
   return (
-    <div className="relative block bottom-0 translate-y-1/2 bg-gradient-to-r from-primary to-secondary shadow-xl w-[60%] mx-auto rounded-xl py-10">
+    <div className="relative block bottom-0 translate-y-1/2 bg-gradient-to-tr from-gradientCol2 to-gradientCol shadow-xl w-[60%] mx-auto rounded-xl py-10">
       <div className="flex flex-wrap items-center justify-around h-full">
         {infoCard.map((info) => (
           <div key={info.id} className="flex flex-col items-center gap-y-3">

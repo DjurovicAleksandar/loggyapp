@@ -54,7 +54,7 @@ const Values = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-20 w-full mx-auto">
           {values.map((val) => (
             <div
-              className="flex flex-col items-center my-8 mx-6 px-3 py-16 rounded-lg shadow-md"
+              className="flex flex-col items-center my-8 mx-6 px-3 py-16 rounded-lg shadow-md hover:scale-105 duration-300 ease-in-out"
               key={val.id}
             >
               <div className="flex w-full items-start px-10 pb-5">

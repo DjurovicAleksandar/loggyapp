@@ -7,57 +7,61 @@ const RoadmapProcess = () => {
     <div className="w-full pb-[200px] bg-bgColor">
       <div className="flex flex-col items-center w-[90%] md:w-[80%] mx-auto">
         <div className="w-full flex flex-col items-center gap-y-10 mb-10">
-          <h1 className="text-5xl w-full md:w-[40%] font-extrabold text-center">
+          <h1 className="text-5xl w-full  font-extrabold text-center">
             How does Product Roadmapping work?
           </h1>
-          <p className="md:w-[50%] w-full text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
-            delectus recusandae nam voluptatem aut accusantium officiis sit
-            dicta reiciendis a fuga.
+          <p className="md:w-[70%] w-full text-center">
+            At Logyy, our Product Roadmapping process is designed for thorough
+            exploration and strategic alignment.
+          </p>
+          <p className="md:w-[75%] w-full text-center">
+            Facilitated through interactive Zoom sessions, these engagements
+            typically span from 4 hours to a full day, providing the necessary
+            space for comprehensive discussions.Importantly, these sessions are
+            recorded, ensuring that valuable discussions are preserved and can
+            be revisited.
           </p>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[100px] pb-10">
-          <div className="hidden md:flex p-10">
+          <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
-          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 ">
-            <h3 className="text-5xl font-bold text-primary text-right">
-              Roadmapping
+          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 p-6">
+            <h3 className="text-4xl font-bold text-primary text-right">
+              Conduct Research
             </h3>
-            <p className="text-center text-lg md:text-right w-full md:w-1/2">
-              The process always starts with a product roadmap. It’s the
-              blueprint that defines everything that should go into the design
-              for it to be a huge success.
+            <p className="text-center text-lg md:text-right w-full md:w-[80%]">
+              Through market, user, and stakeholder research inform our roadmap,
+              aligning it with industry trends and business objectives.
             </p>
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[100px] pb-10">
-          <div className="flex flex-col items-center md:items-start justify-start gap-y-4 ">
-            <h3 className="text-5xl font-bold text-primary text-left">
-              Roadmapping
+          <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
+            <h3 className="text-4xl font-bold text-primary text-left">
+              Implement & Monitor
             </h3>
-            <p className="text-center text-lg md:text-left w-full md:w-1/2">
-              The process always starts with a product roadmap. It’s the
-              blueprint that defines everything that should go into the design
-              for it to be a huge success.
+            <p className="text-center text-lg md:text-left w-full md:w-[80%]">
+              Our teams implement features with precision, while vigilant
+              monitoring ensures adaptability and prompt issue resolution.
             </p>
           </div>
-          <div className="hidden md:flex p-10">
+          <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[100px] pb-10">
-          <div className="hidden md:flex p-10">
+          <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
-          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 ">
-            <h3 className="text-5xl font-bold text-primary text-right">
-              Roadmapping
+          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 p-6">
+            <h3 className="text-4xl font-bold text-primary text-right">
+              Evaluate & Update
             </h3>
-            <p className="text-center text-lg md:text-right w-full md:w-1/2">
-              The process always starts with a product roadmap. It’s the
-              blueprint that defines everything that should go into the design
-              for it to be a huge success.
+            <p className="text-center text-lg md:text-right w-full md:w-[80%]">
+              Post-implementation, we analyze feedback and metrics, using
+              insights to refine the roadmap and stay responsive to evolving
+              needs.
             </p>
           </div>
         </div>

@@ -5,16 +5,16 @@ import Informations from "./Informations";
 
 const FindingOut = () => {
   return (
-    <div className="w-full h-full bg-gradient-to-t from-primary to-bgColor pt-[13rem] md:pt-0">
+    <div className="w-full h-full bg-gradient-to-t from-gradientCol2 to-bgColor pt-[13rem] md:pt-0">
       <div className="w-full">
         <div className="flex flex-col items-center justify-center mx-4 lg:mx-20">
           <h1 className="text-6xl font-semibold xl:text-[5.5rem] text-center mt-[6rem]">
             How{" "}
-            <span className="font-bold text-7xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="font-bold text-7xl bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
               we
             </span>{" "}
             discovered <br />
-            <span className="font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-8xl xl:text-[160px]">
+            <span className="font-bold bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent text-8xl xl:text-[160px]">
               Logy
             </span>
             y?

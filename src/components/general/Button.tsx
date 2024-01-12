@@ -12,13 +12,13 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({
-  bgColor = "#ea7210",
+  bgColor = "#584e6b",
   bgColorHover = "transparent",
   padding = "16px",
   text,
   href = "#",
   textColor = "#FFFFFF",
-  textColorHover = "#ea7210",
+  textColorHover = "#584e6b",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 

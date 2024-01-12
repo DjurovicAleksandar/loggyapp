@@ -17,8 +17,9 @@ const ProductRoadmapping = () => {
         </div>
         <div className=" my-14 w-full md:w-[55%]">
           <p className="text-center">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Temporibus, reiciendis quasi? Architecto necessitatibus
+            Our approach to product roadmapping is rooted in collaboration,
+            ensuring that your vision aligns seamlessly with the practicalities
+            of implementation.
           </p>
         </div>
         <div className="mb-20">

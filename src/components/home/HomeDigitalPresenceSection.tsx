@@ -4,8 +4,11 @@ export default function HomeDigitalPresenceSection() {
   return (
     <SectionLayout>
       <h2 className="font-thin text-center text-4xl md:text-6xl my-10">
-        We&apos;ll craft <span className=" font-bold">the solution</span> to
-        elevate
+        We&apos;ll craft{" "}
+        <span className="bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent font-bold">
+          the solution
+        </span>{" "}
+        to elevate
         <br /> your digital presence
       </h2>
       <p className="mt-10 text-center font-light text-xl md:w-1/2 md:mx-auto mb-40">

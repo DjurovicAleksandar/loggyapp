@@ -11,11 +11,11 @@ const AboutUsHeader = () => {
           <div className="w-full mt-[3.5px]">
             <h1 className="text-center text-5xl xl:text-[5.5rem] xl:leading-[100px]">
               Your digital success starts here.{" "}
-              <span className="text-6xl xl:text-[6rem] font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-6xl xl:text-[6rem] font-bold bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
                 Logyy
               </span>{" "}
               Mastering Marketing, Web Development and
-              <span className="text-6xl font-bold xl:text-[6rem] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-6xl font-bold xl:text-[6rem] bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
                 {" "}
                 UI|UX
               </span>{" "}

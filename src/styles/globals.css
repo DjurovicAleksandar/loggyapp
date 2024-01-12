@@ -6,12 +6,6 @@
   margin-right: 2rem;
 }
 
-.bgImage {
-  background-image: url("../assets/9495910.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .my-image-gallery img {
   width: 25rem;
   height: 25rem;
@@ -49,13 +43,13 @@ h3 {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ea7210;
+  background: #584e6b;
   border-radius: 3.75rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ea7210;
+  background: #584e6b;
 }
 
 @media (max-width: 600px) {

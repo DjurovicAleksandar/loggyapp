@@ -14,7 +14,9 @@ module.exports = {
         bgColor: "#fffafa",
         primary: "#584e6b",
         grayCol: "#D1D5DB",
-        secondary: "#CD5888",
+
+        gradientCol: "#7858a1",
+        gradientCol2: "#d7c3e0",
       },
       padding: {
         padY: "64px",
