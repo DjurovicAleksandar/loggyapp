@@ -1,8 +1,11 @@
+import Image, { StaticImageData } from "next/image";
 import React, { Key } from "react";
+import cash from "@/assets/images/flaticons/cash.png";
 
 export type Language = {
   id: Key;
   name: string;
+  flaticon: StaticImageData;
   description: string;
 };
 
@@ -22,21 +25,25 @@ const techs: Technologies[] = [
     language: [
       {
         id: 2,
+        flaticon: cash,
         name: "Lorem ipsum",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
         id: 3,
+        flaticon: cash,
         name: "Lorem ipsum",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
         id: 4,
+        flaticon: cash,
         name: "Lorem ipsum",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
       {
         id: 5,
+        flaticon: cash,
         name: "Lorem ipsum",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },

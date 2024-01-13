@@ -8,7 +8,11 @@ const RoadmapProcess = () => {
       <div className="flex flex-col items-center w-[90%] md:w-[80%] mx-auto">
         <div className="w-full flex flex-col items-center gap-y-10 mb-10">
           <h1 className="text-5xl w-full  font-extrabold text-center">
-            How does Product Roadmapping work?
+            How does{" "}
+            <span className=" bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
+              Product Roadmapping
+            </span>{" "}
+            work?
           </h1>
           <p className="md:w-[70%] w-full text-center">
             At Logyy, our Product Roadmapping process is designed for thorough
@@ -22,26 +26,26 @@ const RoadmapProcess = () => {
             be revisited.
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[100px] pb-10">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
           <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
-          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 p-6">
-            <h3 className="text-4xl font-bold text-primary text-right">
+          <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
+            <h3 className="text-4xl font-bold text-primary">
               Conduct Research
             </h3>
-            <p className="text-center text-lg md:text-right w-full md:w-[80%]">
+            <p className="text-center text-lg md:text-left w-full md:w-[25rem]">
               Through market, user, and stakeholder research inform our roadmap,
               aligning it with industry trends and business objectives.
             </p>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[100px] pb-10">
-          <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
-            <h3 className="text-4xl font-bold text-primary text-left">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
+          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 p-6">
+            <h3 className="text-4xl font-bold text-primary ">
               Implement & Monitor
             </h3>
-            <p className="text-center text-lg md:text-left w-full md:w-[80%]">
+            <p className="text-center text-lg md:text-right w-full md:w-[25rem]">
               Our teams implement features with precision, while vigilant
               monitoring ensures adaptability and prompt issue resolution.
             </p>
@@ -50,15 +54,15 @@ const RoadmapProcess = () => {
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[100px] pb-10">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
           <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
-          <div className="flex flex-col items-center md:items-end justify-end gap-y-4 p-6">
-            <h3 className="text-4xl font-bold text-primary text-right">
+          <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
+            <h3 className="text-4xl font-bold text-primary">
               Evaluate & Update
             </h3>
-            <p className="text-center text-lg md:text-right w-full md:w-[80%]">
+            <p className="text-center text-lg md:text-left w-full md:w-[25rem]">
               Post-implementation, we analyze feedback and metrics, using
               insights to refine the roadmap and stay responsive to evolving
               needs.

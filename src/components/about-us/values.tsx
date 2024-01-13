@@ -51,7 +51,7 @@ const Values = () => {
         <div className="w-full flex items-center justify-center md:justify-end px-6 mb-20">
           <h1 className="text-5xl font-extrabold text-center">Our Values</h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-20 w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-20 w-full md:mx-auto">
           {values.map((val) => (
             <div
               className="flex flex-col items-center my-8 mx-6 px-3 py-16 rounded-lg shadow-md hover:scale-105 duration-300 ease-in-out"

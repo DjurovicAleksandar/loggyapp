@@ -10,7 +10,8 @@ export const serviceArray = [
   {
     serviceTitle: "Product Roadmapping",
     imgSrc: map,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "Product roadmapping guides strategic planning and prioritization for effective product development.",
     href: "/product-roadmapping",
     serviceDescription:
       "You wouldn&apos;t build a house without a blueprint. Why would you build a headless store or custom software without a Product Roadmap? Get a detailed blueprint that outlines the most cost-effective and future-proofed approach to building your new product.",

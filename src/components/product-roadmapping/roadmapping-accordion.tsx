@@ -9,45 +9,36 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 const accordion: accordionType[] = [
   {
     id: 1,
-    typography: "Can you start right away?",
+    typography: "What are Your primary business objectives and goals?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "What are You aiming to achieve with Your business, and what specific goals do You have in mind? Understanding Your overarching objectives helps us tailor our strategies to align with Your vision and drive measurable success.",
   },
   {
     id: 2,
-    typography: "Can you start right away?",
+    typography:
+      "How do we balance short-term goals with long-term vision in our roadmap?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "To effectively balance short-term goals with our long-term vision in our product roadmap, we employ a strategic approach that involves careful prioritization, iterative planning, and continuous alignment with our overarching business strategy.",
   },
   {
     id: 3,
-    typography: "Can you start right away?",
+    typography:
+      "What specific actions or behaviors do you want users to take on your platform?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Envision the user journey on Your platform. What specific actions or behaviors do You aim to inspire? Whether it's making a purchase, signing up, or exploring content, understanding Your desired user interactions guides us in crafting a user experience that aligns seamlessly with Your goals.",
   },
   {
     id: 4,
-    typography: "Can you start right away?",
+    typography: "What is your preferred timeline for project completion?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Share your ideal schedule for project completion. By knowing your preferred timeline, we can synchronize our efforts to ensure timely delivery and meet your expectations efficiently. This insight helps us tailor our workflow to align with your specific timeframe.",
   },
   {
     id: 5,
-    typography: "Can you start right away?",
+    typography:
+      "How do we capture and apply learnings from each development cycle?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
-  },
-  {
-    id: 6,
-    typography: "Can you start right away?",
-    details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
-  },
-  {
-    id: 7,
-    typography: "Can you start right away?",
-    details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "To systematically capture and apply learnings from each development cycle, we have implemented a comprehensive learning and feedback loop within our product development framework.",
   },
 ];
 
