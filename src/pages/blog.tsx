@@ -1,7 +1,8 @@
 import { type FC } from "react";
 import Link from "next/link";
-import { getLatestPosts } from "./api/postFetch";
+
 import BlogCard from "./blog/BlogCard";
+import { getLatestPosts } from "@/components/utils/PostFetchFunctions";
 
 const blog: FC<{ latestPosts: { [key: string]: any[] } }> = ({
   latestPosts,
@@ -20,16 +21,18 @@ const blog: FC<{ latestPosts: { [key: string]: any[] } }> = ({
             </Link>
           </div>
           <div className="flex w-full lg:w-4/5 mx-auto gap-10 overflow-hidden overflow-x-auto xl:overflow-visible">
-            {posts.sort((a,b)=>a.blogFront.date-b.blogFront.date).map(({ blogFront, slug }) => (
-              <BlogCard
-                key={slug}
-                title={blogFront.title}
-                date={blogFront.date}
-                shortDescription={blogFront.shortDescription}
-                slug={slug}
-                blogImage={blogFront.blogImage}
-              />
-            ))}
+            {posts
+              .sort((a, b) => a.blogFront.date - b.blogFront.date)
+              .map(({ blogFront, slug }) => (
+                <BlogCard
+                  key={slug}
+                  title={blogFront.title}
+                  date={blogFront.date}
+                  shortDescription={blogFront.shortDescription}
+                  slug={slug}
+                  blogImage={blogFront.blogImage}
+                />
+              ))}
           </div>
         </div>
       ))}

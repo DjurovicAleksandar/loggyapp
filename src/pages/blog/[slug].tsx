@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { type FC } from "react";
 import Image from "next/image";
 import { marked } from "marked";
-import { getAllPosts } from "../api/postFetch";
+import { getAllPosts } from "@/components/utils/PostFetchFunctions";
 
 interface PostPageProps {
   blogFront: {

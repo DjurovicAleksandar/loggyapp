@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer3rdBlock = () => {
   return (
-    <div className=" px-padXMobile py-padYMobile md:py-padY  md:px-padX flex justify-between bg-[#2e1065] text-white">
+    <div className=" px-padXMobile py-padYMobile md:py-padY  md:px-padX flex items-end justify-between">
       {/* Logo */}
       <div>
         <Image src={LogyyLogo} width={100} height={100} alt="" />

@@ -1,26 +1,30 @@
-import Image from "next/image";
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 import { type FC } from "react";
 
 interface FooterSocialProps {
-  src: StaticImageData;
+  icon: FC;
   alt: string;
   href?: string;
+  onHmcText: (value: string) => void;
 }
-const FooterSocial: FC<FooterSocialProps> = ({ src, alt, href = "#" }) => {
+const FooterSocial: FC<FooterSocialProps> = ({
+  icon: IconComponent,
+  alt,
+  href = "#",
+  onHmcText,
+}) => {
   return (
     <li
+      onMouseEnter={() => onHmcText(alt.toUpperCase())}
+      onMouseLeave={() => onHmcText("")}
       className={`${
-        alt !== "Facebook" && "border-x-[1px]"
-      }  border-gray-300 p-4 opacity-50 hover:opacity-90 hover:bg-gray-100`}
+        alt !== "Facebook" && "xl:border-x-[1px]"
+      }  border-gray-300 p-4 opacity-50 hover:opacity-90 hover:bg-gray-100 cursor-pointer`}
     >
-      <a href={href}>
-        <Image
-          src={src}
-          alt={alt}
-          className="w-[1.5rem] md:w-[2.5rem] h-[1.5rem] md:h-[2.5rem]"
-        />
-      </a>
+      <Link href={href}>
+        <IconComponent />
+      </Link>
     </li>
   );
 };

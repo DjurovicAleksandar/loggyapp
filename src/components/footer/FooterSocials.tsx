@@ -1,22 +1,23 @@
-import Image from "next/image";
-import dribble from "@/assets/images/social/dribble.png";
-import linkedin from "@/assets/images/social/linkedin.png";
-import instagram from "@/assets/images/social/instagram.png";
-import facebook from "@/assets/images/social/facebook.png";
 import FooterSocial from "./FooterSocial";
+import IconInstagram from "../icons/socials/IconInstagram";
+import IconDribble from "../icons/socials/IconDribble";
+import IconFacebook from "../icons/socials/IconFacebook";
+import IconLinkedin from "../icons/socials/IconLinkedin";
+import { type FC } from "react";
+import { Footer1stBlockProps } from "./Footer1stBlock";
 
 const footerSocials = [
-  { src: dribble, alt: "Dribble" },
-  { src: linkedin, alt: "Linkedin" },
-  { src: instagram, alt: "Instagram" },
-  { src: facebook, alt: "Facebook" },
+  { icon: IconDribble, alt: "Dribble" },
+  { icon: IconLinkedin, alt: "Linkedin" },
+  { icon: IconInstagram, alt: "Instagram" },
+  { icon: IconFacebook, alt: "Facebook" },
 ];
 
-const FooterSocials = () => {
+const FooterSocials: FC<Footer1stBlockProps> = ({ onHmcText }) => {
   return (
-    <ul className="flex w-full items-center justify-center md:justify-end md:items-start">
-      {footerSocials.map(({ src, alt }, i) => (
-        <FooterSocial key={i} src={src} alt={alt} />
+    <ul className="flex w-full items-center justify-between md:justify-end md:items-start">
+      {footerSocials.map(({ icon, alt }, i) => (
+        <FooterSocial onHmcText={onHmcText} key={i} icon={icon} alt={alt} />
       ))}
     </ul>
   );

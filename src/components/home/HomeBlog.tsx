@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { type FC } from "react";
 
 interface HomeBlogProps {
@@ -28,33 +29,31 @@ const HomeBlog: FC<HomeBlogProps> = ({
           alt={blogTitle}
           width={320}
           height={320}
-          className="w-[20rem] h-[20rem]  opacity-80 lg:opacity-100 rounded-xl"
+          className="w-[20rem] h-[20rem]  opacity-80 lg:opacity-100 rounded-xl xl:rounded-r-xl"
         />
       </div>
 
-      <div className="w-full h-full absolute inset-0 rounded-xl px-padXMobile py-padYMobile flex flex-col justify-between bg-gradient-to-r from-black to-transparent">
+      <div className="w-full h-full absolute inset-0 rounded-xl px-padXMobile py-padYMobile flex flex-col justify-between bg-gradient-to-r from-black to-transparent ">
         <div>
           <h3
-            className={`text-primary text-2xl font-medium lg:text-3xl ${
+            className={`text-primary text-2xl font-mediumlg:text-3xl ${
               colWidth && "w-full lg:w-1/2"
             }`}
           >
             {blogTitle}
           </h3>
           <p
-            className={`text-xs font-thin mt-4 text-white ${
-              colWidth ? "lg:w-1/2" : "w-full"
-            } lg:text-sm`}
+            className={`text-xs font-thin mt-4 text-white w-ful lg:w-1/2 lg:text-sm`}
           >
-            {blogDescirption}
+            {blogDescirption.slice(0, 100)}...
           </p>
         </div>
-        <a
+        <Link
           href={`/blog/${href}`}
-          className="bg-primary text-center color-white font-semibold block w-full md:w-fit md:px-padXMobile py-2 rounded-full"
+          className="bg-primary text-center text-white font-thin block w-full md:w-fit md:px-padXMobile py-2 rounded-full hover:scale-110 active:scale-90 duration-300 ease-in-out"
         >
           Learn more
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,9 +1,13 @@
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { GetStaticProps, GetStaticPaths } from "next";
 import { useState, type FC } from "react";
-import { getLatestPosts, getPostsByCategory } from "../api/postFetch";
+
 import BlogCard from "../blog/BlogCard";
-import Button from "@/components/general/Button";
+
 import Link from "next/link";
+import {
+  getLatestPosts,
+  getPostsByCategory,
+} from "@/components/utils/PostFetchFunctions";
 
 interface CategoriesProps {
   posts: {

@@ -1,5 +1,5 @@
+import { getPostsByCategory } from "@/components/utils/PostFetchFunctions";
 import { NextApiRequest, NextApiResponse } from "next";
-import { getPostsByCategory } from "./postFetch";
 
 interface PostsQuery {
   start?: string;

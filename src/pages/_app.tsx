@@ -11,7 +11,6 @@ import Modal from "@/components/general/Modal";
 import { ModalProvider, useModal } from "@/components/general/ModalContext";
 import { useRouter } from "next/router";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 interface AppContentProps {
