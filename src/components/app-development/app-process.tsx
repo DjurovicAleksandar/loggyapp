@@ -72,7 +72,7 @@ const AppProcess = () => {
                   >
                     <Typography
                       variant="h4"
-                      className="capitalize font-bold text-xl text-primary"
+                      className="accordion-text text-primary"
                     >
                       {accordion.typography}
                     </Typography>

@@ -69,10 +69,7 @@ const AccordionContainer = () => {
               aria-controls="panel1a-content"
               id="panel"
             >
-              <Typography
-                variant="h4"
-                className="font-bold text-xl text-primary"
-              >
+              <Typography variant="h4" className="accordion-text text-primary">
                 {items.typography}
               </Typography>
             </AccordionSummary>
