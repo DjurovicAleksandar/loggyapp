@@ -12,14 +12,15 @@ const SupportMaintenance = () => {
             Support & Maintenance
           </h1>
         </div>
-        <div className=" my-14 w-full md:w-[55%]">
+        <div className=" my-14 w-full md:w-[70%]">
           <p className="text-center">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Temporibus, reiciendis quasi? Architecto necessitatibus
+            Services dedicated to ensuring the sustained excellence of your
+            project. We provide ongoing assistance, timely updates, and
+            proactive maintenance for a consistently reliable user experience.
           </p>
         </div>
         <div className="mb-20">
-          <Button text="Get in touch" />
+          <Button text="Contact us" />
         </div>
       </div>
       <TecnologiesSupporting />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 
 import { type FC } from "react";
 
@@ -16,7 +17,7 @@ const HomeServiceConImage: FC<HomeServiceConImageProps> = ({
 }) => {
   return (
     <div className={`mb-10 md:mb-0 ${translate && "md:translate-y-20"}`}>
-      <a href={projectHref}>
+      <Link href={projectHref}>
         <Image
           alt="img1"
           src={projectImg}
@@ -28,7 +29,7 @@ const HomeServiceConImage: FC<HomeServiceConImageProps> = ({
           </h3>
           <p>Improving process management for the GetBuilt team</p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

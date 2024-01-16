@@ -9,27 +9,27 @@ export type Expertise = {
 const expertises: Expertise[] = [
   {
     id: 1,
-    value: "Web Applications",
+    value: "Web Architecture",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Web Architecture aims to create efficient frameworks for websites and applications, utilizing server deployment and cloud services for optimal performance.",
   },
   {
     id: 2,
-    value: "Web Applications",
+    value: "Testing & Debugging",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Testing and Debugging guarantee web application reliability through strategic testing and efficient debugging.",
   },
   {
     id: 3,
-    value: "Web Applications",
+    value: "Frontend Development",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Frontend development aims to design and implement user interfaces for websites and applications, ensuring a seamless and enjoyable user experience.",
   },
   {
     id: 4,
-    value: "Web Applications",
+    value: "Backend Development",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Backend development powers the server-side of websites and applications, managing data, security, and system functionality to support the user interface created by frontend development.",
   },
 ];
 
@@ -40,22 +40,27 @@ const Expertise = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-20 md:mx-auto ">
           {expertises.map((exp) => (
             <div
-              className="flex flex-col items-center my-8 mx-6 px-3 py-16 rounded-lg shadow-md"
+              className="flex flex-col items-center my-8 mx-6 px-3"
               key={exp.id}
             >
-              <div className="px-5 mb-6">
-                <h3 className="capitalize font-bold text-center text-primary text-3xl">
+              <div className="mb-6">
+                <h3 className="capitalize font-bold text-center md:text-left text-primary text-3xl">
                   {exp.value}
                 </h3>
               </div>
-              <div className="px-10">
+              <div className="text-center md:text-left">
                 <p>{exp.description}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="w-[60%] mx-auto flex items-center justify-center md:justify-end md:px-16 my-8">
-          <h1 className="text-5xl font-extrabold text-center">Our Expertise</h1>
+          <h1 className="text-5xl font-extrabold text-center md:text-right">
+            Our{" "}
+            <span className="bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
+              Expertise
+            </span>
+          </h1>
         </div>
       </div>
     </div>

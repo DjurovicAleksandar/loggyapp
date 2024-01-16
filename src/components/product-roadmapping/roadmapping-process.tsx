@@ -7,7 +7,7 @@ const RoadmapProcess = () => {
     <div className="w-full pb-[200px] bg-bgColor">
       <div className="flex flex-col items-center w-[90%] md:w-[80%] mx-auto">
         <div className="w-full flex flex-col items-center gap-y-10 mb-10">
-          <h1 className="text-5xl w-full  font-extrabold text-center">
+          <h1 className="text-5xl w-full font-extrabold text-center">
             How does{" "}
             <span className=" bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
               Product Roadmapping
@@ -26,7 +26,7 @@ const RoadmapProcess = () => {
             be revisited.
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
           <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
@@ -40,7 +40,7 @@ const RoadmapProcess = () => {
             </p>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
           <div className="flex flex-col items-center md:items-end justify-end gap-y-4 p-6">
             <h3 className="text-4xl font-bold text-primary ">
               Implement & Monitor
@@ -54,7 +54,7 @@ const RoadmapProcess = () => {
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
           <div className="hidden md:flex p-6">
             <Image className="rounded-xl" src={ImageDes} alt="image" />
           </div>

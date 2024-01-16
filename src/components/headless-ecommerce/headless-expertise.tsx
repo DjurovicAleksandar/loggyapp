@@ -40,18 +40,18 @@ const HeadlessExpertise = () => {
             ?
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2  md:mx-auto ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:mx-auto">
           {expertises.map((exp) => (
             <div
-              className="flex flex-col items-center my-8 mx-6 px-3 "
+              className="flex flex-col items-start my-8 mx-6 px-3 "
               key={exp.id}
             >
-              <div className="px-5 mb-6">
+              <div className="mb-6">
                 <h3 className="capitalize font-bold text-center md:text-left text-primary text-3xl">
                   {exp.value}
                 </h3>
               </div>
-              <div className="px-5 text-center md:text-left">
+              <div className="text-center md:text-left">
                 <p>{exp.description}</p>
               </div>
             </div>

@@ -13,7 +13,7 @@ const service: Services[] = [
     id: 1,
     heading: "UI|UX Design",
     paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta maiores commodi blanditiis illum cumque corporis eveniet nam ipsum iusto, exercitationem quasi minima expedita nemo beatae ver",
+      "Art of creating visually appealing and user-friendly digital experiences that enhance satisfaction and usability for your audience.",
     headingImg: headerImg,
   },
 ];
@@ -35,7 +35,7 @@ const UiUxDesign = () => {
             <p className="text-center">{item.paragraph}</p>
           </div>
           <div className="mb-20">
-            <Button text="Get in touch" />
+            <Button text="Contact us" />
           </div>
           <div className="w-[80%] mb-20">
             <Image className="rounded-lg" src={item.headingImg} alt="img" />
