@@ -18,12 +18,12 @@ const HeadlesseCommerce = () => {
         </div>
         <div className=" my-14 w-full md:w-[55%]">
           <p className="text-center">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Temporibus, reiciendis quasi? Architecto necessitatibus
+            Unleash unparalleled flexibility, seamless integrations, and rapid
+            innovation for your online presence.
           </p>
         </div>
         <div className="mb-20">
-          <Button text="Get in touch" />
+          <Button text="Go Headless" />
         </div>
         <div className="w-[80%] mb-20">
           <Image className="rounded-lg" src={headerImg} alt="img" />

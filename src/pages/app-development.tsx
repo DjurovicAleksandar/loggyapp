@@ -7,14 +7,13 @@ import AppExpertise from "@/components/app-development/app-expertise";
 import AppTechnologies from "@/components/app-development/app-techologies";
 import AppProcess from "@/components/app-development/app-process";
 import AppPortfolios from "@/components/app-development/app-portfolio";
-import AppAccordion from "@/components/app-development/app-accordion";
 
 const service: Services[] = [
   {
     id: 1,
     heading: "Application Development",
     paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta maiores commodi blanditiis illum cumque corporis eveniet nam ipsum iusto, exercitationem quasi minima expedita nemo beatae ver",
+      "Application development offers customized solutions for building and maintaining applications, encompassing design, bespoke development, e-commerce functionalities, SEO optimization, and continuous support.",
     headingImg: headerImg,
   },
 ];
@@ -32,11 +31,11 @@ const AppDevelopment = () => {
               {item.heading}
             </h1>
           </div>
-          <div className=" my-14 w-full md:w-[55%]">
+          <div className=" my-14 w-full md:w-[70%]">
             <p className="text-center">{item.paragraph}</p>
           </div>
           <div className="mb-20">
-            <Button text="Get in touch" />
+            <Button text="Contact Us" />
           </div>
           <div className="w-[80%] mb-20">
             <Image className="rounded-lg" src={item.headingImg} alt="img" />
@@ -47,7 +46,6 @@ const AppDevelopment = () => {
       <AppTechnologies />
       <AppProcess />
       <AppPortfolios />
-      <AppAccordion />
     </div>
   );
 };

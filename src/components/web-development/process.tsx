@@ -11,27 +11,33 @@ import { accordionType } from "../about-us/accordion";
 const accordionProcess: accordionType[] = [
   {
     id: 1,
-    typography: "Can you start right away?",
+    typography: "Planning Project",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "In the planning phase, tasks, timelines, and resources are outlined in a project plan. Concurrently, decisions are made on the technology stack and development tools, setting the groundwork for efficient execution.",
   },
   {
     id: 2,
-    typography: "Can you start right away?",
+    typography: "Designing the Project",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "In the design phase, wireframes or prototypes shape the website's layout, while the frontend's user interface (UI) and user experience (UX) design are crafted for an appealing and structured digital interface.",
   },
   {
     id: 3,
-    typography: "Can you start right away?",
+    typography: "Frontend Development",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "In frontend development, the designed interface comes to life using HTML, CSS, and JavaScript. Additionally, frontend frameworks like React, Angular, or Vue.js are employed to construct interactive elements, enhancing user engagement.",
   },
   {
     id: 4,
-    typography: "Can you start right away?",
+    typography: "Backend Development",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "In backend development, server-side logic is created using languages like Node.js, Python, or Java. Additionally, databases are set up and seamlessly integrated with the backend code for robust functionality.",
+  },
+  {
+    id: 5,
+    typography: "Testing",
+    details:
+      "In the testing phase, comprehensive testing, including unit, integration, and end-to-end testing, is conducted. Any identified bugs are addressed to ensure the proper functioning of the website or application.",
   },
 ];
 
@@ -41,21 +47,24 @@ const Process = () => {
       <div className="flex flex-col w-[90%] md:w-[80%] items-center mx-auto">
         <div className="flex flex-col items-center w-full px-16 my-8">
           <h1 className="text-5xl text-center font-extrabold">
-            See the Process
+            See the{" "}
+            <span className="bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
+              Process
+            </span>
           </h1>
-          <p className="w-full md:w-[50%] mt-10 mb-20 text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ea
-            debitis fuga.
+          <p className="w-full md:w-[70%] mt-10 mb-20 text-center">
+            The web development process involves several stages, from initial
+            planning to deployment and maintenance.
           </p>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between">
-          <div>
+          <div className="md:w-1/2 mx-10">
             {accordionProcess.map((accordion) => (
               <div
                 className="flex items-center justify-center"
                 key={accordion.id}
               >
-                <Accordion className="bg-white w-[80%] border-b p-6">
+                <Accordion className="bg-white border-b p-6">
                   <AccordionSummary
                     expandIcon={<ExpandMoreRounded className="text-primary" />}
                     aria-controls="panel1a-content"
@@ -63,7 +72,7 @@ const Process = () => {
                   >
                     <Typography
                       variant="h4"
-                      className="capitalize font-bold text-xl text-primary"
+                      className="accordion-text text-primary"
                     >
                       {accordion.typography}
                     </Typography>
@@ -75,8 +84,8 @@ const Process = () => {
               </div>
             ))}
           </div>
-          <div className="hidden md:flex w-full">
-            <Image src={ProcessImg} alt="img" />
+          <div className="hidden md:flex w-1/2">
+            <Image src={ProcessImg} className="rounded-xl" alt="img" />
           </div>
         </div>
       </div>

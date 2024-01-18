@@ -9,45 +9,48 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 const supportQuestions: accordionType[] = [
   {
     id: 1,
-    typography: "Can you start right away?",
+    typography: "What are Your primary business objectives and goals?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "What are You aiming to achieve with Your business, and what specific goals do You have in mind? Understanding Your overarching objectives helps us tailor our strategies to align with Your vision and drive measurable success.",
   },
   {
     id: 2,
-    typography: "Can you start right away?",
+    typography:
+      "How are bug fixes handled, and what is the typical turnaround time?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Bug fixes are promptly addressed through our support system. Critical issues aim for resolution within 24 to 48 hours, while less severe bugs may take a few days to a week. Our priority is swift resolution for uninterrupted functionality.",
   },
   {
     id: 3,
-    typography: "Can you start right away?",
+    typography: "How do you ensure the security of our website/application?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "We ensure your website/application's security through regular audits, timely patches, access controls, encryption, and continuous monitoring for vulnerabilities, staying updated on industry best practices.",
   },
   {
     id: 4,
-    typography: "Can you start right away?",
+    typography: "What area does your team specialize in?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
-  },
-  {
-    id: 5,
-    typography: "Can you start right away?",
-    details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Our team specializes in various areas of web and app development, including frontend and backend technologies, UI/UX design, and database management. We have expertise in delivering tailored solutions to meet diverse project requirements.",
   },
   {
     id: 6,
-    typography: "Can you start right away?",
+    typography: "Where is our team located?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Our small agency is founded in Bosnia & Herzegovina, based in city of Sarajevo, 2023 ",
+  },
+  {
+    id: 6,
+    typography:
+      "Can you provide examples of successful support and maintenance for similar projects?",
+    details:
+      "Certainly, we have a track record of successfully supporting and maintaining projects similar to yours. For example, in recent e-commerce and CMS projects, we demonstrated effective bug resolution, proactive maintenance, and seamless scalability.",
   },
   {
     id: 7,
-    typography: "Can you start right away?",
+    typography:
+      "Wondering about our availability to start your project immediately?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "As a boutique agency, our availability to start projects is contingent on the current workload. Feel free to reach out with details about your project, and we'll promptly check our schedule to provide you with an accurate timeframe for commencement. ",
   },
 ];
 
@@ -67,10 +70,7 @@ const SupportAccordion = () => {
               aria-controls="panel1a-content"
               id="panel"
             >
-              <Typography
-                variant="h4"
-                className="capitalize font-bold text-xl text-primary"
-              >
+              <Typography variant="h4" className="accordion-text text-primary">
                 {items.typography}
               </Typography>
             </AccordionSummary>

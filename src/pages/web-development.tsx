@@ -21,7 +21,7 @@ const service: Services[] = [
     id: 1,
     heading: "Web Development",
     paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta maiores commodi blanditiis illum cumque corporis eveniet nam ipsum iusto, exercitationem quasi minima expedita nemo beatae ver",
+      "Web development provides tailored solutions for websites and applications, including design, custom development, e-commerce, SEO, and ongoing support.",
     headingImg: headerImg,
   },
 ];
@@ -43,7 +43,7 @@ const WebDevelopment = () => {
             <p className="text-center">{item.paragraph}</p>
           </div>
           <div className="mb-20">
-            <Button text="Get in touch" />
+            <Button text="Contact Us" />
           </div>
           <div className="w-[80%] mb-20">
             <Image className="rounded-lg" src={item.headingImg} alt="img" />

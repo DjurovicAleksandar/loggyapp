@@ -9,45 +9,50 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 const accordion: accordionType[] = [
   {
     id: 1,
-    typography: "Can you start right away?",
+    typography: "What area does your team specialize in?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Our team specializes in various areas of web and app development, including frontend and backend technologies, UI/UX design, and database management. We have expertise in delivering tailored solutions to meet diverse project requirements.",
   },
   {
     id: 2,
-    typography: "Can you start right away?",
+    typography:
+      "How do you handle project management and ensure timely delivery?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "We employ Agile methodology, detailed planning, regular communication, and collaborative tools for effective project management. Timely delivery is ensured through clear milestones, continuous monitoring, scalable resources, risk management, client involvement, and a focus on quality assurance.",
   },
   {
     id: 3,
-    typography: "Can you start right away?",
+    typography:
+      "How do you select the technology stack for a specific project?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "We choose the technology stack based on the project's requirements, client preferences, and the type of project (e.g., website, web app, mobile app), ensuring alignment with goals and existing infrastructure.",
   },
   {
     id: 4,
-    typography: "Can you start right away?",
+    typography:
+      "What is your preferred content management system (CMS) if any?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Regarding content management, do you have a preferred Content Management System (CMS) in mind, or are you open to recommendations? Understanding your CMS preference, if any, helps us tailor our development approach to integrate seamlessly with your chosen platform or provide suitable suggestions based on your needs.",
   },
   {
     id: 5,
-    typography: "Can you start right away?",
+    typography: "What is your design and user experience philosophy?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Our design and user experience philosophy revolves around creating intuitive and visually appealing interfaces. We prioritize user-centric design, ensuring a seamless and engaging experience that aligns with our clients' brand identity and enhances overall usability.",
   },
   {
     id: 6,
-    typography: "Can you start right away?",
+    typography:
+      "Do you offer ongoing support and maintenance after the project is completed?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "We provide ongoing support and maintenance services after the completion of the project. Our team is committed to ensuring the continued functionality, security, and optimal performance of the developed website or application. We offer support packages that include regular updates, troubleshooting, and any necessary enhancements to meet evolving needs.",
   },
   {
     id: 7,
-    typography: "Can you start right away?",
+    typography:
+      "Are SEO (Search Engine Optimization) services included in your offerings? ",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Certainly, our services encompass a comprehensive suite of SEO strategies. From content optimization to performance enhancements, we employ a holistic approach to boost your website's visibility and improve its ranking on search engines, ultimately driving organic traffic and enhancing user engagement.",
   },
 ];
 
@@ -67,10 +72,7 @@ const AccordionWeb = () => {
               aria-controls="panel1a-content"
               id="panel"
             >
-              <Typography
-                variant="h4"
-                className="capitalize font-bold text-xl text-primary"
-              >
+              <Typography variant="h4" className="accordion-text text-primary">
                 {items.typography}
               </Typography>
             </AccordionSummary>

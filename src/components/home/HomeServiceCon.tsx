@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 
 import { type FC } from "react";
 import HomeServiceConImage from "./HomeServiceConImage";
+import Link from "next/link";
 
 interface HomeServiceConProps {
   serviceName: string;
@@ -41,12 +42,12 @@ const HomeServiceCon: FC<HomeServiceConProps> = ({
         <p className="w-full md:w-4/5 md:mb-0 md:text-lg ">
           {serviceDescription}
         </p>
-        <a
+        <Link
           href={serviceHref}
           className="block my-4 md:my-0 md:mt-10 text-primary font-semibold hover:scale-105 duration-300"
         >
           Check project <span className="text-2xl ">&#8605;</span>
-        </a>
+        </Link>
       </div>
 
       <div className="md:flex items-center w-full gap-5">

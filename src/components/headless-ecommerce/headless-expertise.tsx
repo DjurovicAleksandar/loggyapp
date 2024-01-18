@@ -4,27 +4,26 @@ import { Expertise } from "../web-development/expertise";
 const expertises: Expertise[] = [
   {
     id: 1,
-    value: "Web Applications",
+    value: "Instant user engagement",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Capture attention with swift load times, ensuring a delightful customer experience.",
   },
   {
     id: 2,
-    value: "Web Applications",
+    value: "Improved Performance",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Decoupling the presentation layer boosts performance by allowing independent optimizations and updates, ensuring a faster and more responsive user experience.",
   },
   {
     id: 3,
-    value: "Web Applications",
-    description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+    value: "Swift content deployment",
+    description: "Effortlessly publish an abundance of marketing content.",
   },
   {
     id: 4,
-    value: "Web Applications",
+    value: "Accelerated development",
     description:
-      "We specialise in turning wishlists into apps that perfectly fit how you do business.",
+      "Boost development speed for rapid feature deployment and innovation.",
   },
 ];
 
@@ -32,23 +31,27 @@ const HeadlessExpertise = () => {
   return (
     <div className="w-full pb-[200px] bg-bgColor">
       <div className="flex flex-col md:flex-row items-start justify-between mx-auto w-[90%] md:w-[80%]">
-        <div className="w-[60%] mx-auto flex items-center justify-center md:justify-start md:px-16 my-8">
-          <h1 className="text-5xl font-extrabold text-center md:text-left">
-            Time to go headless?
+        <div className="w-[60%] mx-auto flex items-center justify-center md:justify-start md:mr-5 my-8">
+          <h1 className="text-5xl font-bold text-center md:text-left">
+            Time to go{" "}
+            <span className="bg-gradient-to-bl from-gradientCol to-gradientCol2 bg-clip-text text-transparent">
+              headless
+            </span>
+            ?
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-20 md:mx-auto ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:mx-auto">
           {expertises.map((exp) => (
             <div
-              className="flex flex-col items-center my-8 mx-6 px-3 py-16 rounded-lg shadow-md"
+              className="flex flex-col items-start my-8 mx-6 px-3 "
               key={exp.id}
             >
-              <div className="px-5 mb-6">
-                <h3 className="capitalize font-bold text-center text-primary text-3xl">
+              <div className="mb-6">
+                <h3 className="capitalize font-bold text-center md:text-left text-primary text-3xl">
                   {exp.value}
                 </h3>
               </div>
-              <div className="px-10">
+              <div className="text-center md:text-left">
                 <p>{exp.description}</p>
               </div>
             </div>

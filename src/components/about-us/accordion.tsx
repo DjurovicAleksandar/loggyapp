@@ -45,6 +45,12 @@ const accordion: accordionType[] = [
     details:
       "Regarding content management, do you have a preferred Content Management System (CMS) in mind, or are you open to recommendations? Understanding your CMS preference, if any, helps us tailor our development approach to integrate seamlessly with your chosen platform or provide suitable suggestions based on your needs.",
   },
+  {
+    id: 6,
+    typography: "Where is our team located?",
+    details:
+      "Our small agency is founded in Bosnia & Herzegovina, based in city of Sarajevo, 2023 ",
+  },
 ];
 
 const AccordionContainer = () => {
@@ -57,16 +63,13 @@ const AccordionContainer = () => {
       </div>
       {accordion.map((items) => (
         <div key={items.id} className="flex items-center justify-center w-full">
-          <Accordion className="bg-white w-[80%] border-b p-6">
+          <Accordion className="bg-white w-[90%] md:w-[80%] border-b p-6">
             <AccordionSummary
               expandIcon={<ExpandMoreRounded className="text-primary" />}
               aria-controls="panel1a-content"
               id="panel"
             >
-              <Typography
-                variant="h4"
-                className="font-bold text-xl text-primary"
-              >
+              <Typography variant="h4" className="accordion-text text-primary">
                 {items.typography}
               </Typography>
             </AccordionSummary>

@@ -9,45 +9,40 @@ import { ExpandMoreRounded } from "@mui/icons-material";
 const accordion: accordionType[] = [
   {
     id: 1,
-    typography: "Can you start right away?",
+    typography: "What Technologies Are Involved in Headless Ecommerce?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Headless ecommerce utilizes technologies like Headless CMS, Ecommerce Platforms, Front-end Frameworks, APIs, Serverless Technologies, Static Site Generators, Cloud Services, and Jamstack Architecture Tools to create a flexible and customizable architecture, separating the front-end from the ecommerce backend.",
   },
   {
     id: 2,
-    typography: "Can you start right away?",
+    typography:
+      "Who is Your target audience, and what is Your unique selling proposition?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Tell us about the audience You want to capture and the unique qualities that make Your business shine. Who are Your ideal customers, and what makes Your product or service irresistible to them? Unraveling these details helps us tailor our approach to effectively reach and engage Your target market.",
   },
   {
     id: 3,
-    typography: "Can you start right away?",
+    typography: "How Will SEO be Affected by a Headless Approach?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "In headless ecommerce, SEO remains vital. By incorporating best practices like server-side rendering and meticulous metadata handling, the impact on SEO can be minimized or improved. Regular collaboration with developers and SEO specialists ensures ongoing optimization.",
   },
   {
     id: 4,
-    typography: "Can you start right away?",
+    typography: "What is your preferred timeline for project completion?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Share your ideal schedule for project completion. By knowing your preferred timeline, we can synchronize our efforts to ensure timely delivery and meet your expectations efficiently. This insight helps us tailor our workflow to align with your specific timeframe.",
   },
   {
     id: 5,
-    typography: "Can you start right away?",
+    typography: "Is Headless Ecommerce More Expensive to Implement?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "While the upfront cost of headless ecommerce may be higher, the long-term advantages in terms of scalability and adaptability often justify the investment for businesses seeking flexibility and enhanced user experiences.",
   },
   {
     id: 6,
-    typography: "Can you start right away?",
+    typography: "How Will Headless Ecommerce Impact User Experience?",
     details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
-  },
-  {
-    id: 7,
-    typography: "Can you start right away?",
-    details:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis repudiandae vel vitae inventore. Mollitia quidem deserunt libero asperiores, eius dolore ullam aliquam assumenda quaerat adipisci ipsam, aliquid est reprehenderit.",
+      "Headless ecommerce significantly enhances user experience by providing flexibility and customization, enabling seamless and personalized interactions across different channels and devices through faster updates and improved performance.",
   },
 ];
 
@@ -67,10 +62,7 @@ const HeadlessAccordion = () => {
               aria-controls="panel1a-content"
               id="panel"
             >
-              <Typography
-                variant="h4"
-                className="capitalize font-bold text-xl text-primary"
-              >
+              <Typography variant="h4" className="accordion-text text-primary">
                 {items.typography}
               </Typography>
             </AccordionSummary>
