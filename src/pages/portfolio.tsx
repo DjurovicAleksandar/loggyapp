@@ -2,6 +2,7 @@ import Image from "next/image";
 import PortfolioContent from "@/components/portfolio/PortfolioContent";
 import { projects } from "@/data/ProjectsDb";
 import { useModal } from "@/components/general/ModalContext";
+import FsLightbox from "fslightbox-react";
 
 const Portfolio = () => {
   const { showModal, setShowModal } = useModal();
