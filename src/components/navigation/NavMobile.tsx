@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { type FC, } from "react";
+import { type FC } from "react";
 import { serviceArray } from "../../data/NavServicesDb";
 
 interface NavMobileProps {
@@ -9,7 +9,9 @@ interface NavMobileProps {
 
 const NavMobile: FC<NavMobileProps> = ({ onOpenServices, openServices }) => {
   return (
-    <ul className="px-14 py-[25vh] text-4xl flex flex-col gap-4 font-base w-full h-full bg-gray-50">
+    <ul
+      className={`px-14 py-[25vh] text-4xl flex flex-col gap-4 font-base w-full h-full bg-gray-50`}
+    >
       <li className=" hover:text-primary">
         <Link href="/">Home</Link>
       </li>
@@ -32,7 +34,9 @@ const NavMobile: FC<NavMobileProps> = ({ onOpenServices, openServices }) => {
                 href={href}
                 key={i}
               >
-                {serviceTitle}
+                <div>
+                  <a>{serviceTitle}</a>
+                </div>
               </Link>
             );
           })}

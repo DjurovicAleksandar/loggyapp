@@ -65,3 +65,12 @@ h3 {
   font-weight: 700;
   text-transform: capitalize;
 }
+
+.text-str {
+  color: #000;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}

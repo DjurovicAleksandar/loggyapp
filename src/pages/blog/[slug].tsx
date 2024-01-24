@@ -33,7 +33,7 @@ const PostPage: FC<PostPageProps> = ({ blogFront, content }) => {
   return (
     <div className=" bg-gray-50 px-padXMobile lg:px-padX  py-padYMobile pt-40 lg:pt-60 flex flex-col items-center justify-center gap-40 overflow-hidden">
       {/* Post header */}
-      <div className="w-full flex-col lg:flex-row flex justify-between items-center">
+      <div className="w-full flex-col lg:flex-row flex justify-between items-center gap-x-10">
         {/* Text header */}
         <div className="w-full lg:w-1/2">
           <h3 className="text-gray-400 my-5">{date}</h3>
