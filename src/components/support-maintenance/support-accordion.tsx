@@ -39,14 +39,14 @@ const supportQuestions: accordionType[] = [
       "Our small agency is founded in Bosnia & Herzegovina, based in city of Sarajevo, 2023 ",
   },
   {
-    id: 6,
+    id: 7,
     typography:
       "Can you provide examples of successful support and maintenance for similar projects?",
     details:
       "Certainly, we have a track record of successfully supporting and maintaining projects similar to yours. For example, in recent e-commerce and CMS projects, we demonstrated effective bug resolution, proactive maintenance, and seamless scalability.",
   },
   {
-    id: 7,
+    id: 8,
     typography:
       "Wondering about our availability to start your project immediately?",
     details:

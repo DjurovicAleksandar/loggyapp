@@ -47,7 +47,7 @@ const values: Value[] = [
 const Values = () => {
   return (
     <div className="w-full pb-[200px]">
-      <div className="flex flex-col items-center justify-center mx-auto w-[80%]">
+      <div className="flex flex-col items-center justify-center mx-auto w-4/5">
         <div className="w-full flex items-center justify-center md:justify-end px-6 mb-20">
           <h1 className="text-5xl font-extrabold text-center">Our Values</h1>
         </div>
@@ -65,12 +65,12 @@ const Values = () => {
                   alt={val.value}
                 />
               </div>
-              <div className="px-10 mb-6">
+              <div className="px-3 md:px-10 mb-6">
                 <h3 className="capitalize font-bold text-primary text-3xl">
                   {val.value}
                 </h3>
               </div>
-              <div className="px-10">
+              <div className="px-3 md:px-10">
                 <p>{val.description}</p>
               </div>
             </div>

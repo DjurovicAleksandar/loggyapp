@@ -35,7 +35,7 @@ export default function HomeLaptopSection() {
             engaging interfaces, and Support & Maintenance for continuous
             operational excellence.
           </p>
-          <Image alt="Laptop" src={people} className="my-10" />
+          <Image alt="business people" src={people} className="my-10" />
         </div>
       </div>
     </SectionLayout>
