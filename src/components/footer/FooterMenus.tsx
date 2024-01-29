@@ -13,11 +13,18 @@ interface FooterMenusProps {
 
 const FooterMenus: FC<FooterMenusProps> = ({ menuTitle, menuItems }) => {
   return (
-    <div>
-      <h4 className="text-2xl font-semibold mb-4">{menuTitle}</h4>
+    <div className="mb-10 lg:mb-0">
+      <h4 className="text-2xl font-semibold mb-4 text-primary">{menuTitle}</h4>
       <ul className="text-grayCol flex flex-col gap-4 text-lg">
         {menuItems.map(({ text, href }, i) => {
-          return <FooterMenuItem key={i} text={text} href={href} />;
+          return (
+            <FooterMenuItem
+              menuTitle={menuTitle}
+              key={i}
+              text={text}
+              href={href}
+            />
+          );
         })}
       </ul>
     </div>

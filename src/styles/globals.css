@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
 .marquee-item {
   margin-right: 2rem;
 }
@@ -27,6 +35,20 @@ h2 {
 h3 {
   font-size: 1.3rem;
 }
+
+/* SVGS */
+
+/* .hoverable-svg path {
+  transition: fill 0.3s ease;
+}
+
+.hoverable-svg:hover {
+  background-color: #584e6b;
+}
+
+.hoverable-svg:hover path {
+  fill: white;
+} */
 
 /* SCROLL BAR */
 

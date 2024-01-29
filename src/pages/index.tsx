@@ -1,13 +1,12 @@
 import { type FC, useEffect } from "react";
-import { useScroll, useAnimation } from "framer-motion";
+import { useScroll } from "framer-motion";
 import HomeServiceSection from "@/components/home/HomeServiceSection";
 import HomeBlogSection from "@/components/home/HomeBlogSection";
 import HomeHeader from "@/components/home/HomeHeader";
 import HomeMarqueeSection from "@/components/home/HomeMarqueeSection";
 import HomeDigitalPresenceSection from "@/components/home/HomeDigitalPresenceSection";
 import HomeLaptopSection from "@/components/home/HomeLaptopSection";
-import HomeContactSection from "@/components/home/HomeContactSection";
-import { getAllPosts } from "./api/postFetch";
+import { getFirstPostPerCategory } from "@/components/utils/PostFetchFunctions";
 
 interface HomeProps {
   posts: [];
@@ -25,8 +24,8 @@ const Home: FC<HomeProps> = ({ posts }) => {
         const sectionHeight = section.offsetHeight;
         const scrollPosition = scrollY.get();
 
-        const startColor = [167, 139, 250];
-        const finalColor = [46, 16, 101];
+        const startColor = [238, 237, 240];
+        const finalColor = [88, 78, 107];
 
         const maxScroll = sectionTop + sectionHeight;
         const scrollPercentage =
@@ -55,10 +54,8 @@ const Home: FC<HomeProps> = ({ posts }) => {
       <HomeMarqueeSection />
       <HomeDigitalPresenceSection />
       <HomeServiceSection />
-
       <HomeLaptopSection />
       <HomeBlogSection posts={posts} />
-      <HomeContactSection id="home-contact-section" />
     </main>
   );
 };
@@ -66,7 +63,8 @@ const Home: FC<HomeProps> = ({ posts }) => {
 export default Home;
 
 export async function getStaticProps() {
-  const posts = getAllPosts();
+  const posts = getFirstPostPerCategory();
+
   return {
     props: {
       posts,
