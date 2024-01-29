@@ -8,7 +8,7 @@ interface HomeBlogSectionProps {
 
 const HomeBlogSection: FC<HomeBlogSectionProps> = ({ posts }) => {
   return (
-    <SectionLayout className="mt-[10rem]">
+    <SectionLayout>
       <h2 className="text-4xl lg:text-6xl text-left font-bold mb-20">
         Latest articles
       </h2>
