@@ -37,13 +37,13 @@ const teamInfo: Team[] = [
   {
     id: 5,
     imageUrl: markoMarkovic,
-    position: "backend engineer",
-    name: "milunka savic",
+    position: "social manager",
+    name: "ana krunić",
   },
   {
     id: 6,
     imageUrl: markoMarkovic,
-    position: "web designer",
+    position: "backend engineer",
     name: "marko markovic",
   },
 ];
