@@ -28,8 +28,6 @@ const PostPage: FC<PostPageProps> = ({ blogFront, content }) => {
     writterImage,
   } = blogFront;
 
-  console.log(writter);
-
   return (
     <div className=" bg-gray-50 px-padXMobile lg:px-padX  py-padYMobile pt-40 lg:pt-60 flex flex-col items-center justify-center gap-40 overflow-hidden">
       {/* Post header */}

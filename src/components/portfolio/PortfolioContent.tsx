@@ -6,7 +6,6 @@ import FsLightbox from "fslightbox-react";
 
 interface ImageItem {
   original: StaticImageData;
-  thumbnail: StaticImageData;
 }
 
 interface PortfolioContentProps {
