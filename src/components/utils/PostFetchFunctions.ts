@@ -73,7 +73,7 @@ export function getPostsByCategory(
 //fetch latest 3 posts by category
 export function getLatestPosts() {
   const posts: Post[] = getAllPosts();
-  const categories = ["Highlight", "Development", "UXUI"];
+  const categories = ["ITnews", "Development", "UXUI"];
   const latestPostsByCategory: LatestPostsByCategory = {};
 
   categories.forEach((category) => {

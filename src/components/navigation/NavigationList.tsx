@@ -11,7 +11,7 @@ interface NavListProps {
 const NavigationList: FC<NavListProps> = ({ openServices, onOpenServices }) => {
   return (
     <>
-      <ul className=" gap-5 text-black hidden md:flex">
+      <ul className=" gap-14 text-black hidden md:flex">
         <li
           className="group duration-300 ease-linear cursor-pointer relative"
           onClick={() => {

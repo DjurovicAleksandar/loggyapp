@@ -28,7 +28,10 @@ const footerMenus = [
   {
     menuTitle: "Blog",
     menuItems: [
-      { text: "Highlight", href: "categories/highlight" },
+      {
+        text: "Events In the It World",
+        href: "categories/itnews",
+      },
       { text: "UX/UI", href: "categories/uxui" },
       { text: "Development", href: "categories/development" },
     ],

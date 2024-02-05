@@ -56,7 +56,7 @@ const accordion: accordionType[] = [
 const AccordionContainer = () => {
   return (
     <div className="w-full h-full py-[200px]">
-      <div className="w-[80%] items-center justify-start mb-20 px-6 mx-auto">
+      <div className="w-4/5 items-center justify-start mb-20 px-6 mx-auto">
         <h1 className="text-5xl font-extrabold ">
           Discover things that you are <br /> interested in with us.
         </h1>
@@ -69,7 +69,10 @@ const AccordionContainer = () => {
               aria-controls="panel1a-content"
               id="panel"
             >
-              <Typography variant="h4" className="accordion-text text-primary">
+              <Typography
+                variant="h4"
+                className="!text-lg !leading-7 !font-bold !capitalize text-primary"
+              >
                 {items.typography}
               </Typography>
             </AccordionSummary>

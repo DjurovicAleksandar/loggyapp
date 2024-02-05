@@ -4,10 +4,10 @@ title: "Tech Talk: Breaking Down the Hottest IT Headlines"
 date: "24th January 2024"
 shortDescription: "Explore the latest in tech with 'Tech Talk.' Breaking down IT headlines for quick insights into innovation and trends, keeping you in the know."
 blogImage: "/images/posts/tech-talk-img.jpg"
-category: "Highlight"
+category: "ITnews"
 writter: "Bujak Davor"
 writterDescription: "Davor Bujak, our front-end developer, seamlessly merges the worlds of code and combat.With a keyboard in one hand and a black belt in the other, Davor is not just coding for success but grappling his way to victory on the global stage. Discover the unique journey of this coding champion and martial arts maestro."
-writterImage: ""
+writterImage: "/images/posts/bujakdavor.jpg"
 ---
 
 # **Tech Talk: Breaking Down the Hottest IT Headlines**

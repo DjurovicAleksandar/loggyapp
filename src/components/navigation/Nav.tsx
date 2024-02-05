@@ -41,7 +41,7 @@ const Nav = () => {
   return (
     <nav
       className={`fixed lg:left-1/2 lg:-translate-x-1/2 lg:top-10 ${
-        scrolledFromTop ? "bg-gray-50/70" : "bg-gray-50"
+        scrolledFromTop ? "bg-gray-50/70" : "bg-gray-50/85"
       } w-full lg:w-4/5 h-[6rem] lg:rounded-full flex justify-between items-center px-padXMobile  md:px-20 shadow-md z-10`}
     >
       <NavLogo />
