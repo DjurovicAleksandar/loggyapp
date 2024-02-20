@@ -30,7 +30,7 @@ const PortfolioContent: FC<PortfolioContentProps> = ({
 
   const [toggler, setToggler] = useState(false);
 
-  console.log(projectImages);
+
   return (
     <div className="bg-white shadow-md rounded-xl lg:w-1/2 lg:flex  mt-[5rem] lg:mt-[10rem] lg:px-padXMobile lg: py-padYMobile lg:h-[25rem]">
       <div className="w-full relative">

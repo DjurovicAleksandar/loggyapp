@@ -17,7 +17,7 @@ const FooterSocial: FC<FooterSocialProps> = ({
   return (
     <li
       onMouseEnter={() => onHmcText(alt.toUpperCase())}
-      onMouseLeave={() => onHmcText("")}
+      // onMouseLeave={() => onHmcText("")}
       className={`${
         alt !== "Facebook" && "xl:border-x-[1px]"
       }  border-gray-300 p-4 opacity-50 hover:opacity-90 hover:bg-gray-100 cursor-pointer`}

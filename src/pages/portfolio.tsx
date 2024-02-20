@@ -3,6 +3,7 @@ import PortfolioContent from "@/components/portfolio/PortfolioContent";
 import { projects } from "@/data/ProjectsDb";
 import { useModal } from "@/components/general/ModalContext";
 import FsLightbox from "fslightbox-react";
+import Head from "next/head";
 
 const Portfolio = () => {
   const { showModal, setShowModal } = useModal();
@@ -63,5 +64,28 @@ const Portfolio = () => {
 };
 
 export default function portfolio() {
-  return <Portfolio />;
+  return (
+    <>
+      <Head>
+        <title>Loggy - Portfolio</title>
+        <meta
+          name="description"
+          content="Explore Loggy's portfolio showcasing a creative web development agency specializing in product roadmapping, providing strategic planning and guidance for the development and enhancement of digital products."
+        />
+        <meta
+          name="keywords"
+          content="loggy, portfolio, web development, creative agency, product roadmapping, support and maintenance, UX design, UI design, online presence, innovation"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Loggy - Portfolio" />
+        <meta
+          property="og:description"
+          content="Explore Loggy's portfolio showcasing a creative web development agency specializing in product roadmapping, providing strategic planning and guidance for the development and enhancement of digital products."
+        />
+        <meta property="og:image" content="/socialImg" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <Portfolio />;
+    </>
+  );
 }

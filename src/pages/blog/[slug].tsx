@@ -77,6 +77,8 @@ const PostPage: FC<PostPageProps> = ({ blogFront, content }) => {
   );
 };
 
+export default PostPage;
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const allPosts = getAllPosts();
 
@@ -115,4 +117,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
-export default PostPage;

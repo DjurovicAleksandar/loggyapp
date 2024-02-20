@@ -7,56 +7,44 @@ import HomeMarqueeSection from "@/components/home/HomeMarqueeSection";
 import HomeDigitalPresenceSection from "@/components/home/HomeDigitalPresenceSection";
 import HomeLaptopSection from "@/components/home/HomeLaptopSection";
 import { getFirstPostPerCategory } from "@/components/utils/PostFetchFunctions";
+import Head from "next/head";
 
 interface HomeProps {
   posts: [];
 }
 
 const Home: FC<HomeProps> = ({ posts }) => {
-  const { scrollY } = useScroll();
-
-  useEffect(() => {
-    const section = document.getElementById("home-contact-section");
-
-    const handleScroll = () => {
-      if (section) {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const scrollPosition = scrollY.get();
-
-        const startColor = [238, 237, 240];
-        const finalColor = [88, 78, 107];
-
-        const maxScroll = sectionTop + sectionHeight;
-        const scrollPercentage =
-          (scrollPosition - sectionTop) / (maxScroll - sectionTop);
-
-        const color = startColor.map((channel, index) => {
-          const difference = finalColor[index] - channel;
-          return Math.round(channel + difference * scrollPercentage);
-        });
-
-        const finalBackgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
-        section.style.backgroundColor = finalBackgroundColor;
-      }
-    };
-
-    const unsubscribeScroll = scrollY.onChange(handleScroll);
-
-    return () => {
-      unsubscribeScroll();
-    };
-  }, [scrollY]);
-
   return (
-    <main className={`w-full relative`}>
-      <HomeHeader />
-      <HomeMarqueeSection />
-      <HomeDigitalPresenceSection />
-      <HomeServiceSection />
-      <HomeLaptopSection />
-      <HomeBlogSection posts={posts} />
-    </main>
+    <>
+      <Head>
+        <title>Loggy - The Creative Agency</title>
+        <meta
+          name="description"
+          content="Discover Loggy, the creative web development agency, and explore our portfolio showcasing expertise in product roadmapping. We provide strategic planning and guidance for the development and enhancement of digital products."
+        />
+        <meta
+          name="keywords"
+          content="loggy, creative agency, web development, portfolio, product roadmapping, support and maintenance, UX design, UI design, online presence, innovation"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Loggy - The Creative Agency" />
+        <meta
+          property="og:description"
+          content="Discover Loggy, the creative web development agency, and explore our portfolio showcasing expertise in product roadmapping. We provide strategic planning and guidance for the development and enhancement of digital products."
+        />
+        <meta property="og:image" content="/socialImg" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+
+      <main className={`w-full relative`}>
+        <HomeHeader />
+        <HomeMarqueeSection />
+        <HomeDigitalPresenceSection />
+        <HomeServiceSection />
+        <HomeLaptopSection />
+        <HomeBlogSection posts={posts} />
+      </main>
+    </>
   );
 };
 

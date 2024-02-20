@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { type FC } from "react";
+import { footerSocials } from "../footer/FooterSocials";
 
 interface HomeContactSectionProps {
   id: string;
@@ -7,6 +8,11 @@ interface HomeContactSectionProps {
 }
 
 const HomeContactSection: FC<HomeContactSectionProps> = ({ id, hmcText }) => {
+  const socialLink = footerSocials
+    .filter(({ icon, alt, href }, i) => alt.toUpperCase() === hmcText)
+    .map((obj, i) => obj.href)
+    .join("");
+
   return (
     <section
       id={id}
@@ -15,7 +21,11 @@ const HomeContactSection: FC<HomeContactSectionProps> = ({ id, hmcText }) => {
       <h4 className="text-white text-2xl lg:text-6xl font-thin text-center mb-4">
         LET US FIX YOUR ONLINE PRESENCE
       </h4>
-      <Link href="#" className="text-white text-4xl lg:text-8xl font-bold ">
+      <Link
+        href={hmcText === "" ? "/get-in-touch" : socialLink}
+        className="text-white text-4xl lg:text-8xl font-bold"
+        target="_blank"
+      >
         {hmcText === "" ? <span>CONTACT US</span> : <span>{hmcText}</span>}
       </Link>
     </section>
