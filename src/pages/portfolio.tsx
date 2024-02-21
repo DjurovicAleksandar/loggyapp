@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useModal } from "@/components/general/ModalContext";
 import Head from "next/head";
-import header1 from "@/assets/images/portfolio/web/gr8solutions.jpg.jpg";
+import header1 from "@/assets/images/portfolio/web/gr8solutions.jpg";
 import { useState } from "react";
 import PortfolioContent from "@/components/portfolio/PortfolioContent";
 const Portfolio = () => {
