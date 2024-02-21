@@ -1,6 +1,5 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { type FC } from "react";
-import "react-image-gallery/styles/css/image-gallery.css";
 import { useModal } from "../general/ModalContext";
 import header1 from "@/assets/images/portfolio/web/gr8solutions.jpg.jpg";
 

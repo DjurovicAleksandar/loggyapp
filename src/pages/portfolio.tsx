@@ -9,8 +9,27 @@ const Portfolio = () => {
   const [portfolioCategory, setPortfolioCategory] = useState("development");
 
   return (
-    <main className={` w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX `}>
-      <section className="relative">
+    <>
+      <Head>
+        <title>Loggy - Portfolio</title>
+        <meta
+          name="description"
+          content="Explore Loggy's portfolio showcasing a creative web development agency specializing in product roadmapping, providing strategic planning and guidance for the development and enhancement of digital products."
+        />
+        <meta
+          name="keywords"
+          content="loggy, portfolio, web development, creative agency, product roadmapping, support and maintenance, UX design, UI design, online presence, innovation"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Loggy - Portfolio" />
+        <meta
+          property="og:description"
+          content="Explore Loggy's portfolio showcasing a creative web development agency specializing in product roadmapping, providing strategic planning and guidance for the development and enhancement of digital products."
+        />
+        <meta property="og:image" content="/socialImg" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <section className="relative w-full py-[40%] md:py-[15%] px-padXMobile md:px-padX">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap -mx-3">
             <div className="w-full lg:w-1/3 px-3 pt-10 lg:pt-20 pb-10">
@@ -121,33 +140,8 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 
-export default function portfolio() {
-  return (
-    <>
-      <Head>
-        <title>Loggy - Portfolio</title>
-        <meta
-          name="description"
-          content="Explore Loggy's portfolio showcasing a creative web development agency specializing in product roadmapping, providing strategic planning and guidance for the development and enhancement of digital products."
-        />
-        <meta
-          name="keywords"
-          content="loggy, portfolio, web development, creative agency, product roadmapping, support and maintenance, UX design, UI design, online presence, innovation"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Loggy - Portfolio" />
-        <meta
-          property="og:description"
-          content="Explore Loggy's portfolio showcasing a creative web development agency specializing in product roadmapping, providing strategic planning and guidance for the development and enhancement of digital products."
-        />
-        <meta property="og:image" content="/socialImg" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <Portfolio />;
-    </>
-  );
-}
+export default Portfolio;
