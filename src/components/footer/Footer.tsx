@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <HomeContactSection hmcText={hmcText} id="home-contact-section" />
-      <footer className="bg-white w-full">
+      <footer className="bg-gray-100 w-full">
         <Footer1stBlock onHmcText={setHmcText} />
         <Footer2ndBlock />
         <Footer3rdBlock />

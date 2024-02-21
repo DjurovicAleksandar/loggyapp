@@ -15,7 +15,7 @@ const FooterMenus: FC<FooterMenusProps> = ({ menuTitle, menuItems }) => {
   return (
     <div className="mb-10 lg:mb-0">
       <h4 className="text-2xl font-semibold mb-4 text-primary">{menuTitle}</h4>
-      <ul className="text-grayCol flex flex-col gap-4 text-lg">
+      <ul className="text-gray-600 flex flex-col gap-4 text-lg">
         {menuItems.map(({ text, href }, i) => {
           return (
             <FooterMenuItem
