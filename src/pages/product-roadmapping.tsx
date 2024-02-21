@@ -7,6 +7,8 @@ import RoadmapBusiness from "@/components/product-roadmapping/roadmapping-better
 import RoadmapAccordion from "@/components/product-roadmapping/roadmapping-accordion";
 import Head from "next/head";
 
+import roadmapping from "@/assets/images/services/roadmapping.jpg";
+
 const ProductRoadmapping = () => {
   return (
     <>
@@ -51,7 +53,11 @@ const ProductRoadmapping = () => {
             <Button text="Get your Roadmap" />
           </div>
           <div className="w-[80%] mb-20">
-            <Image className="rounded-lg" src={headerImg} alt="img" />
+            <Image
+              className="rounded-lg"
+              src={roadmapping}
+              alt="Loggy - Roadmapping"
+            />
           </div>
         </div>
         <RoadmapProcess />

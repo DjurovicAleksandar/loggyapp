@@ -9,13 +9,15 @@ import AppProcess from "@/components/app-development/app-process";
 import AppPortfolios from "@/components/app-development/app-portfolio";
 import Head from "next/head";
 
+import app from "@/assets/images/services/app.jpg";
+
 const service: Services[] = [
   {
     id: 1,
     heading: "Application Development",
     paragraph:
       "Application development offers customized solutions for building and maintaining applications, encompassing design, bespoke development, e-commerce functionalities, SEO optimization, and continuous support.",
-    headingImg: headerImg,
+    headingImg: app,
   },
 ];
 
@@ -60,7 +62,11 @@ const AppDevelopment = () => {
               <Button text="Contact Us" />
             </div>
             <div className="w-[80%] mb-20">
-              <Image className="rounded-lg" src={item.headingImg} alt="img" />
+              <Image
+                className="rounded-lg"
+                src={item.headingImg}
+                alt={`Loggy - ${item.heading}`}
+              />
             </div>
           </div>
         ))}

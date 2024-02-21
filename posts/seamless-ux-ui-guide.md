@@ -5,9 +5,9 @@ date: "4th January 2024"
 shortDescription: "A seamless UX/UI journey is the key to not just attracting users but retaining them by providing delightful interactions with digital products or services."
 blogImage: "/images/posts/uxuiseamles.jpg"
 category: "UXUI"
-writter: "Aleksandar Đurović"
-writterDescription: "Aleksandar, our front-end developer, not only crafts intricate lines of code but also indulges in the ancient art of scribbling human-readable tales. It seems like he's the maestro of both binary and narrative languages!"
-writterImage: "/images/posts/aleksandar.jpg"
+writter: "Bojan Mičić"
+writterDescription: "The ideal design should trigger your inner emotions, stimulate your visual impression and that you commit to memory"
+writterImage: "/images/posts/micha.jpg"
 ---
 
 # **Crafting Seamless UX/UI Journeys: A Comprehensive Guide to Digital Delight**

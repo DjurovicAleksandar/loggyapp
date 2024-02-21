@@ -7,6 +7,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { ExpandMoreRounded } from "@mui/icons-material";
 import { accordionType } from "../about-us/accordion";
+import development from "@/assets/images/services/development/development.jpg";
 
 const accordionProcess: accordionType[] = [
   {
@@ -85,7 +86,11 @@ const Process = () => {
             ))}
           </div>
           <div className="hidden md:flex w-1/2">
-            <Image src={ProcessImg} className="rounded-xl" alt="img" />
+            <Image
+              src={development}
+              className="rounded-xl"
+              alt="Loggy - Development"
+            />
           </div>
         </div>
       </div>

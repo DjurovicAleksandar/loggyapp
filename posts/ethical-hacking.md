@@ -5,9 +5,9 @@ date: "1st February 2024"
 shortDescription: "Delve into the realm of cybersecurity with 'The Role of Ethical Hacking.' Uncover how ethical hackers play a crucial role in identifying vulnerabilities and enhancing security. Explore the dynamic landscape of digital defense as we navigate the ethical hacking frontier together."
 blogImage: "/images/posts/6.jpg"
 category: "ITnews"
-writter: "Bujak Davor"
-writterDescription: "Discover the latest breakthroughs in 'Cloud Computing Advancements: Pushing Boundaries in Data Storage.' Journey with us as we explore the cutting-edge developments reshaping the landscape of data storage in the cloud, pushing the boundaries of what's possible in the digital realm."
-writterImage: "/images/posts/bujakdavor.jpg"
+writter: "Boriša Krstić"
+writterDescription: "Boriša, our seasoned full-stack developer, problem solver, and a self-proclaimed 'console.log' connoisseur."
+writterImage: "/images/posts/borisa.jpg"
 ---
 
 # **Introduction to Ethical Hacking**

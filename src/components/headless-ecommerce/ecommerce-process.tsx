@@ -2,6 +2,10 @@ import React from "react";
 import ImageDes from "@/assets/images/home/header1.jpg";
 import Image from "next/image";
 
+import eroadmapping from "@/assets/images/services/ecommerce/eroadmapping.jpg";
+import edesign from "@/assets/images/services/ecommerce/edesign.jpg";
+import edevelopment from "@/assets/images/services/ecommerce/edevelopment.jpg";
+
 const HeadlessProcess = () => {
   return (
     <div className="w-full bg-bgColor">
@@ -21,7 +25,11 @@ const HeadlessProcess = () => {
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={eroadmapping}
+              alt="Ecommerce - roadmapping"
+            />
           </div>
           <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
             <h3 className="md:text-4xl text-3xl font-bold text-primary">
@@ -48,12 +56,20 @@ const HeadlessProcess = () => {
             </p>
           </div>
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={edesign}
+              alt="Ecommerce design"
+            />
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between md:px-[80px] pb-10">
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={edevelopment}
+              alt="Ecommerce development"
+            />
           </div>
           <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
             <h3 className="md:text-4xl text-3xl font-bold text-primary">

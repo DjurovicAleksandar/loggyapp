@@ -5,9 +5,9 @@ date: "21th December 2023"
 shortDescription: "In the realm of web development, HTML reigns supreme as the backbone of digital craftsmanship."
 blogImage: "/images/posts/html5webdesign.jpg"
 category: "Development"
-writter: "Aleksandar Đurović"
-writterDescription: "Aleksandar, our front-end developer, not only crafts intricate lines of code but also indulges in the ancient art of scribbling human-readable tales. It seems like he's the maestro of both binary and narrative languages!"
-writterImage: "/images/posts/aleksandar.jpg"
+writter: "Boriša Krstić"
+writterDescription: "Boriša, our seasoned full-stack developer, problem solver, and a self-proclaimed 'console.log' connoisseur."
+writterImage: "/images/posts/borisa.jpg"
 ---
 
 # **Mastering HTML for Dynamic Design**

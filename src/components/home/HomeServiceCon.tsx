@@ -46,7 +46,7 @@ const HomeServiceCon: FC<HomeServiceConProps> = ({
           href={serviceHref}
           className="block my-4 md:my-0 md:mt-10 text-primary font-semibold hover:scale-105 duration-300"
         >
-          Check project <span className="text-2xl ">&#8605;</span>
+          Check service <span className="text-2xl ">&#8605;</span>
         </Link>
       </div>
 

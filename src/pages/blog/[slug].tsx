@@ -64,11 +64,11 @@ const PostPage: FC<PostPageProps> = ({ blogFront, content }) => {
               alt={writter}
               width={100}
               height={100}
-              className="w-[12rem] h-auto"
+              className="w-[8rem] h-auto"
             />
             <div>
               <h2 className="font-medium">{writter}</h2>
-              <p className="font-light w-4/5 text-sm">{writterDescription}</p>
+              <p className="font-light w-4/5 text-lg">{writterDescription}</p>
             </div>
           </div>
         </div>

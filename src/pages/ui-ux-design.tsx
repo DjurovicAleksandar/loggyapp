@@ -9,13 +9,15 @@ import DesignPortfolios from "@/components/design/portfolios-design";
 import OurProcess from "@/components/design/ourProcess";
 import Head from "next/head";
 
+import uxui from "@/assets/images/services/uxui.jpg";
+
 const service: Services[] = [
   {
     id: 1,
     heading: "UI|UX Design",
     paragraph:
       "Art of creating visually appealing and user-friendly digital experiences that enhance satisfaction and usability for your audience.",
-    headingImg: headerImg,
+    headingImg: uxui,
   },
 ];
 
@@ -60,7 +62,11 @@ const UiUxDesign = () => {
               <Button text="Contact us" />
             </div>
             <div className="w-[80%] mb-20">
-              <Image className="rounded-lg" src={item.headingImg} alt="img" />
+              <Image
+                className="rounded-lg"
+                src={item.headingImg}
+                alt={`Loggy - ${item.heading}`}
+              />
             </div>
           </div>
         ))}

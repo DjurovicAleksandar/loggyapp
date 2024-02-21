@@ -2,6 +2,11 @@ import React from "react";
 import ImageDes from "@/assets/images/home/header1.jpg";
 import Image from "next/image";
 
+import wireframe from "@/assets/images/services/uxui/wireframe.jpg";
+import design from "@/assets/images/services/uxui/design.jpg";
+import finalization from "@/assets/images/services/uxui/finalization.jpg";
+import launching from "@/assets/images/services/uxui/launching.jpg";
+
 const OurProcess = () => {
   return (
     <div className="w-full pt-[200px] bg-bgColor">
@@ -22,7 +27,11 @@ const OurProcess = () => {
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={wireframe}
+              alt="UXUI wireframe"
+            />
           </div>
           <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
             <h3 className="text-4xl text-center md:text-left font-bold text-primary">
@@ -49,12 +58,16 @@ const OurProcess = () => {
             </p>
           </div>
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image className="rounded-xl" src={design} alt="UXUI design" />
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={finalization}
+              alt="UXUI finalization"
+            />
           </div>
           <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
             <h3 className="text-4xl text-center md:text-left font-bold text-primary">
@@ -80,7 +93,11 @@ const OurProcess = () => {
             </p>
           </div>
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={launching}
+              alt="UXUI launching"
+            />
           </div>
         </div>
       </div>

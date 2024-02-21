@@ -23,12 +23,12 @@ const HomeServiceConImage: FC<HomeServiceConImageProps> = ({
           src={projectImg}
           className="rounded-xl w-full h-auto md:w-[20rem] max-w-[20rem]"
         />
-        <div>
+        {/* <div>
           <h3 className=" font-bold my-5 lg:my-2 lg:text-2xl lg:mt-8 text-primary">
-            Get Built
+            Portfolio
           </h3>
-          <p>Improving process management for the GetBuilt team</p>
-        </div>
+          <p>Check our previos works</p>
+        </div> */}
       </Link>
     </div>
   );

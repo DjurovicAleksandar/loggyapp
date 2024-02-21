@@ -6,6 +6,15 @@ import ux from "@/assets/images/nav/ux.png";
 import coding from "@/assets/images/nav/coding.png";
 import header1 from "@/assets/images/home/header1.jpg";
 
+import development1 from "@/assets/images/services/development/development.jpg";
+import development2 from "@/assets/images/services/roadmapping/update.jpg";
+
+import ecom1 from "@/assets/images/services/ecommerce/edesign.jpg";
+import ecom2 from "@/assets/images/services/ecommerce/edevelopment.jpg";
+
+import uxui1 from "@/assets/images/services/uxui/design.jpg";
+import uxui2 from "@/assets/images/services/uxui/finalization.jpg";
+
 export const serviceArray = [
   {
     serviceTitle: "Product Roadmapping",
@@ -17,9 +26,9 @@ export const serviceArray = [
       "You wouldn&apos;t build a house without a blueprint. Why would you build a headless store or custom software without a Product Roadmap? Get a detailed blueprint that outlines the most cost-effective and future-proofed approach to building your new product.",
 
     project1Img: header1,
-    project1Href: "#",
+    project1Href: "/portfolio",
     project2Img: header1,
-    project2Href: "#",
+    project2Href: "/portfolio",
   },
   {
     serviceTitle: "Website Development",
@@ -30,10 +39,10 @@ export const serviceArray = [
     serviceDescription:
       "Leveraging modern Jamstack technologies like Next.js, Strapi, and Contentful. Secure a site that's easily managed, impresses visitors, and empowers your marketing team for agile movements.",
 
-    project1Img: header1,
-    project1Href: "#",
-    project2Img: header1,
-    project2Href: "#",
+    project1Img: development2,
+    project1Href: "/portfolio",
+    project2Img: development1,
+    project2Href: "/portfolio",
   },
   {
     serviceTitle: "Headless eCommerce",
@@ -44,10 +53,10 @@ export const serviceArray = [
     serviceDescription:
       "Embracing headless architecture for a faster site, rapid development, and flexible front-end capabilities. The multitude of choices can be overwhelming. Let us guide you through options and implement the most suitable stack for your needs.",
 
-    project1Img: header1,
-    project1Href: "#",
-    project2Img: header1,
-    project2Href: "#",
+    project1Img: ecom1,
+    project1Href: "/portfolio",
+    project2Img: ecom2,
+    project2Href: "/portfolio",
   },
   {
     serviceTitle: "Application Development",
@@ -59,9 +68,9 @@ export const serviceArray = [
       "Bid farewell to cumbersome workarounds with a bespoke web app designed for your business. Together, we'll craft a product geared toward impacting your bottom line.",
 
     project1Img: header1,
-    project1Href: "#",
+    project1Href: "/portfolio",
     project2Img: header1,
-    project2Href: "#",
+    project2Href: "/portfolio",
   },
   {
     serviceTitle: "UI/UX Design",
@@ -72,10 +81,10 @@ export const serviceArray = [
     serviceDescription:
       "Ensure your customers never question the professionalism behind the app they're using. Allow us to sculpt a refined, optimized experience that propels your service to unparalleled heights.",
 
-    project1Img: header1,
-    project1Href: "#",
-    project2Img: header1,
-    project2Href: "#",
+    project1Img: uxui1,
+    project1Href: "/portfolio",
+    project2Img: uxui2,
+    project2Href: "/portfolio",
   },
   {
     serviceTitle: "Support & Maintenance",
@@ -87,8 +96,8 @@ export const serviceArray = [
       "Gain access to on-demand fixes, enhancements, and routine software tune-ups. Explore our adaptable support and maintenance packages for your convenience.",
 
     project1Img: header1,
-    project1Href: "#",
+    project1Href: "/portfolio",
     project2Img: header1,
-    project2Href: "#",
+    project2Href: "/portfolio",
   },
 ];

@@ -10,6 +10,8 @@ import AccordionWeb from "@/components/web-development/accordionWeb";
 import Portfolios from "@/components/web-development/portfolios";
 import Head from "next/head";
 
+import web from "@/assets/images/services/web.jpg";
+
 export type Services = {
   id: Key;
   heading: string;
@@ -23,7 +25,7 @@ const service: Services[] = [
     heading: "Web Development",
     paragraph:
       "Web development provides tailored solutions for websites and applications, including design, custom development, e-commerce, SEO, and ongoing support.",
-    headingImg: headerImg,
+    headingImg: web,
   },
 ];
 
@@ -71,7 +73,11 @@ const WebDevelopment = () => {
               <Button text="Contact Us" />
             </div>
             <div className="w-[80%] mb-20">
-              <Image className="rounded-lg" src={item.headingImg} alt="img" />
+              <Image
+                className="rounded-lg"
+                src={item.headingImg}
+                alt={`Loggy - ${item.heading}`}
+              />
             </div>
           </div>
         ))}

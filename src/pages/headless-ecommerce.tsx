@@ -8,6 +8,8 @@ import HeadlessProcess from "@/components/headless-ecommerce/ecommerce-process";
 import HeadlessAccordion from "@/components/headless-ecommerce/ecommerce-accordion";
 import Head from "next/head";
 
+import ecommerce from "@/assets/images/services/ecommerce.jpg";
+
 const HeadlesseCommerce = () => {
   return (
     <>
@@ -51,7 +53,11 @@ const HeadlesseCommerce = () => {
             <Button text="Go Headless" />
           </div>
           <div className="w-[80%] mb-20">
-            <Image className="rounded-lg" src={headerImg} alt="img" />
+            <Image
+              className="rounded-lg"
+              src={ecommerce}
+              alt={`Loggy - Headless eCommerce`}
+            />
           </div>
         </div>
         <HeadlessExpertise />

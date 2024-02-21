@@ -2,6 +2,10 @@ import React from "react";
 import ImageDes from "@/assets/images/home/header1.jpg";
 import Image from "next/image";
 
+import research from "@/assets/images/services/roadmapping/research.jpg";
+import monitor from "@/assets/images/services/roadmapping/monitor.jpg";
+import update from "@/assets/images/services/roadmapping/update.jpg";
+
 const RoadmapProcess = () => {
   return (
     <div className="w-full pb-[200px] bg-bgColor">
@@ -27,8 +31,12 @@ const RoadmapProcess = () => {
           </p>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
-          <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+          <div className="hidden md:flex p-6 ">
+            <Image
+              className="rounded-xl w-full h-full"
+              src={research}
+              alt="Loggy - Research"
+            />
           </div>
           <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
             <h3 className="text-4xl font-bold text-primary">
@@ -51,12 +59,20 @@ const RoadmapProcess = () => {
             </p>
           </div>
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={monitor}
+              alt="Loggy - Implement & Monitor"
+            />
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between pb-10">
           <div className="hidden md:flex p-6">
-            <Image className="rounded-xl" src={ImageDes} alt="image" />
+            <Image
+              className="rounded-xl"
+              src={update}
+              alt="Loggy - Evaluate & Update"
+            />
           </div>
           <div className="flex flex-col items-center md:items-start justify-start gap-y-4 p-6">
             <h3 className="text-4xl font-bold text-primary">

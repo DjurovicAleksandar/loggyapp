@@ -20,7 +20,7 @@ const NavServices = () => {
     <div className=" absolute w-[700px]  bg-white z-10  left-1/2  -translate-x-1/2 shadow-md rounded-xl">
       <NavServicesList />
       <div className="bg-gray-50 px-padXMobile py-padYMobile">
-        <h2 className="mb-4 font-bold">Recent Posts</h2>
+        <h2 className="mb-4 text-xs font-bold">Recent Posts</h2>
         <div className="flex flex-col gap-2">
           {posts.map(({ slug, blogFront }, i) => {
             const { title } = blogFront;
@@ -28,14 +28,14 @@ const NavServices = () => {
               <Link
                 href={`/blog/${slug}`}
                 key={i}
-                className="text-md font-light hover:text-primary"
+                className="text-xs font-light hover:text-primary"
               >
                 {title}
               </Link>
             );
           })}
 
-          <Link href="/blog" className="mt-4">
+          <Link href="/blog" className="mt-4 text-xs">
             View all posts →
           </Link>
         </div>

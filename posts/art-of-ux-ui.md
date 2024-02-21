@@ -5,9 +5,9 @@ date: "3rd January 2024"
 shortDescription: "Get ready to dive into the fascinating world of empathy in pixels, where understanding your users is the key to success."
 blogImage: "/images/posts/masteringuxui.jpg"
 category: "UXUI"
-writter: "Aleksandar Đurović"
-writterDescription: "Aleksandar, our front-end developer, not only crafts intricate lines of code but also indulges in the ancient art of scribbling human-readable tales. It seems like he's the maestro of both binary and narrative languages!"
-writterImage: "/images/posts/aleksandar.jpg"
+writter: "Bojan Mičić"
+writterDescription: "The ideal design should trigger your inner emotions, stimulate your visual impression and that you commit to memory"
+writterImage: "/images/posts/micha.jpg"
 ---
 
 # **Empathy in Pixels: Mastering the Art of User Experience Design**

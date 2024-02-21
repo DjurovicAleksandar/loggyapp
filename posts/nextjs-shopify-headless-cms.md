@@ -5,9 +5,9 @@ date: "1st January 2024"
 shortDescription: "If you've lost your traffic overnight, then we've prepared the most common sense guide to fix the issue."
 blogImage: "/images/posts/nextjsheadlescmsshopify.jpg"
 category: "Development"
-writter: "Aleksandar Đurović"
-writterDescription: "Aleksandar, our front-end developer, not only crafts intricate lines of code but also indulges in the ancient art of scribbling human-readable tales. It seems like he's the maestro of both binary and narrative languages!"
-writterImage: "/images/posts/aleksandar.jpg"
+writter: "Boriša Krstić"
+writterDescription: "Boriša, our seasoned full-stack developer, problem solver, and a self-proclaimed 'console.log' connoisseur."
+writterImage: "/images/posts/borisa.jpg"
 ---
 
 # **Power Your Content with Seamless Integration: Next.js + Shopify Headless CMS**

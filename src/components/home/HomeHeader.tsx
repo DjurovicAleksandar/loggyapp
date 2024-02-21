@@ -1,7 +1,11 @@
 import Image from "next/image";
 import headerImg from "@/assets/images/home/headerImg.jpg";
-import header1 from "@/assets/images/home/header1.jpg";
 import Button from "@/components/general/Button";
+
+import headerImg1 from "@/assets/images/home/headerImg1.jpg";
+import headerImg2 from "@/assets/images/home/headerImg2.jpg";
+import headerImg3 from "@/assets/images/home/headerImg3.jpg";
+import headerImg4 from "@/assets/images/home/headerImg4.jpg";
 
 export default function HomeHeader() {
   return (
@@ -35,23 +39,23 @@ export default function HomeHeader() {
         {/* Images */}
         <div className="mt-20 lg:mt-0 relative h-[20rem] lg:h-[25rem] lg:w-full xl:h-[40rem] w-[20rem] xl:w-full  mx-auto xl:mx-0 ">
           <Image
-            alt="Header 1"
-            src={header1}
+            alt="Loggy - your place to build your influence"
+            src={headerImg1}
             className="w-[7rem] lg:w-[10rem]  xl:w-[18rem] xl:h-auto rounded-xl  absolute top-0"
           />
           <Image
-            alt="Header 1"
-            src={header1}
+            alt="Loggy - your place to build your influence"
+            src={headerImg2}
             className="w-[8rem] h-[8rem] lg:w-[10rem] lg:h-[10rem]  xl:w-[15rem] xl:h-[15rem] rounded-xl  absolute bottom-5 left-5 lg:bottom-0 lg:-left-10 "
           />
           <Image
-            alt="Header 1"
-            src={header1}
+            alt="Loggy - your place to build your influence"
+            src={headerImg3}
             className="w-[8rem] h-[8rem] lg:w-[10rem] lg:h-[10rem]  xl:w-[15rem] xl:h-[15rem] rounded-xl absolute right-10 lg:-right-5  top-0 lg:-top-5 "
           />
           <Image
-            alt="Header 1"
-            src={header1}
+            alt="Loggy - your place to build your influence"
+            src={headerImg4}
             className="w-[9rem] h-[12rem] lg:w-[12rem] lg:h-[15rem] xl:w-[18rem]  xl:h-auto rounded-xl absolute  left-1/2 bottom-0 lg:left-32 xl:left-[50%]"
           />
         </div>

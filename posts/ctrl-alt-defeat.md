@@ -6,7 +6,7 @@ shortDescription: "Navigate the complexities of the digital landscape with 'Ctrl
 blogImage: "/images/posts/woman-s-hands-notebook-keyboard.jpg"
 category: "ITnews"
 writter: "Bujak Davor"
-writterDescription: "Davor Bujak, our front-end developer, seamlessly merges the worlds of code and combat.With a keyboard in one hand and a black belt in the other, Davor is not just coding for success but grappling his way to victory on the global stage. Discover the unique journey of this coding champion and martial arts maestro."
+writterDescription: "Davor Bujak, our front-end developer, seamlessly merges the worlds of code and combat. With a keyboard in one hand and a black belt in the other, Davor is not just coding for success but grappling his way to victory on the global stage. Discover the unique journey of this coding champion and martial arts maestro."
 writterImage: "/images/posts/bujakdavor.jpg"
 ---
 

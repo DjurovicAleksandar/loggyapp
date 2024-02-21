@@ -8,6 +8,8 @@ import Typography from "@mui/material/Typography";
 import { ExpandMoreRounded } from "@mui/icons-material";
 import { accordionType } from "../about-us/accordion";
 
+import uxui from "@/assets/images/services/uxui/uxui.jpg";
+
 const accordionProcess: accordionType[] = [
   {
     id: 1,
@@ -54,7 +56,7 @@ const OurJob = () => {
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between">
           <div className="hidden md:flex w-1/2">
-            <Image className="rounded-xl" src={ProcessImg} alt="img" />
+            <Image className="rounded-xl" src={uxui} alt="UXUI proces" />
           </div>
           <div className="md:w-1/2 mx-10">
             {accordionProcess.map((accordion) => (
